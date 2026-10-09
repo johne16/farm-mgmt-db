@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.streamlit/secrets.toml
+.vscode/
+.idea/
+Thumbs.db
+desktop.ini
+~$*

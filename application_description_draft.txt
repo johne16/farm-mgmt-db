@@ -1,0 +1,41 @@
+[Project Title]
+
+[Team Member 1], [Team Member 2]
+CS 5493/4243 Large Scale Database Management Systems, Fall 2026
+Course Project Part 1: Application Description
+
+
+1. High-Level Description
+
+This application is a database and management tool for a small farm owner whose local farming business is growing. The owner now operates multiple farms and needs one database that covers the whole business instead of a separate one for each farm.
+
+The database tracks what each farm has and what each farm does. It records the buildings, equipment, animals, and workers at each farm, along with the crops planted in each field and their harvests. It also covers the business side: the products each farm has in stock, the orders customers place for those products, the bills each farm owes to its vendors, and the payments made toward those bills.
+
+The owner, farm managers, and other workers use a web application to look up this information and to keep it current. With everything in one place, the owner can compare farms and see the state of the whole business at once.
+
+
+2. Entity Sets
+
+[ENTITY SETS AND ATTRIBUTES]
+
+
+3. Relationship Sets and Business Rules
+
+[RELATIONSHIP SETS TABLE WITH KEY AND PARTICIPATION CONSTRAINTS]
+
+[RELATIONSHIP SET ATTRIBUTES]
+
+
+4. Data Acquisition
+
+All of the data will be synthetic, created by an LLM.
+
+
+5. User Interaction
+
+1. The owner can see what is planted and which livestock are on each of their farms.
+2. The mechanic can check and update the status of the equipment.
+3. The manager can check which products are in stock for a particular farm.
+4. The manager can keep track of bills.
+5. The owner can see which products are in stock to bring to the farmers market.
+6. Users can add customer orders and bills.
