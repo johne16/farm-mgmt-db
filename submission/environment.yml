@@ -1,0 +1,7 @@
+name: farm_mgmt
+channels:
+  - conda-forge
+dependencies:
+  - python
+  - streamlit
+  - psycopg2
