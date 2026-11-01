@@ -80,7 +80,8 @@ create table Buildings (
  farm_id integer not null,
  foreign key (farm_id) references Farms(farm_id),
  check (building_type in ('barn', 'silo', 'greenhouse', 'storage shed', 'coop')),
- check (capacity_unit in ('animals', 'tons', 'bushels', 'machines'))
+ check (capacity_unit in ('animals', 'tons', 'bushels', 'machines')),
+ check (condition_status in ('good', 'fair', 'poor'))
 );
 
 create table Equipment (
@@ -117,7 +118,8 @@ create table Animals (
  move_in_date date,
  foreign key (farm_id) references Farms(farm_id),
  foreign key (building_id) references Buildings(building_id),
- check (purpose in ('dairy', 'meat', 'breeding', 'eggs'))
+ check (purpose in ('dairy', 'meat', 'breeding', 'eggs')),
+ check (health_status in ('healthy', 'sick', 'injured', 'under treatment'))
 );
 
 create table Plantings (

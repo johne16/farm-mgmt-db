@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Farm management: sidebar layout</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600&family=Zilla+Slab:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --soil: #22362b;
+    --soil-raised: #35503f;
+    --on-soil: #eaf0e6;
+    --on-soil-muted: #a9bbae;
+    --field: #2e6b45;
+    --page: #f6f8f3;
+    --widget: #e7ede2;
+    --ink: #1c2a21;
+    --ink-muted: #55665a;
+    --line: #cbd6c6;
+    --alert: #b3261e;
+    --radius: 4px;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--page);
+    color: var(--ink);
+    font: 400 1rem/1.5 "Public Sans", system-ui, sans-serif;
+  }
+
+  h1, h2 {
+    font-family: "Zilla Slab", Georgia, serif;
+    font-weight: 600;
+    line-height: 1.15;
+    margin: 0;
+  }
+  h1 { font-size: 2.75rem; }
+  h2 { font-size: 1.5rem; margin-bottom: 0.75rem; }
+
+  p { margin: 0; }
+
+  :focus-visible { outline: 3px solid #d9a521; outline-offset: 2px; }
+
+  .app { display: grid; grid-template-columns: 17rem minmax(0, 1fr); min-height: 100vh; }
+
+  .sidebar { background: var(--soil); color: var(--on-soil); padding: 1.5rem 1rem; }
+
+  .nav-section {
+    color: var(--on-soil-muted);
+    font-size: 0.875rem;
+    margin: 1.25rem 0.5rem 0.25rem;
+  }
+
+  .nav-link {
+    display: block;
+    width: 100%;
+    padding: 0.4rem 0.5rem;
+    background: none;
+    border: 0;
+    border-radius: var(--radius);
+    color: inherit;
+    font: inherit;
+    text-align: left;
+    cursor: pointer;
+  }
+  .nav-link:hover { background: var(--soil-raised); }
+  .nav-link[aria-current="page"] { background: var(--soil-raised); font-weight: 600; }
+
+  main { padding: 3rem 3.5rem 4rem; max-width: 76rem; }
+
+  .caption { color: var(--ink-muted); font-size: 0.875rem; }
+  .page-head { margin-bottom: 2rem; }
+  .page-head .caption { margin-top: 0.5rem; }
+
+  .metrics { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1rem; margin-bottom: 2.5rem; }
+  .metric { border: 1px solid var(--line); border-radius: var(--radius); padding: 1rem; }
+  .metric-label { font-size: 0.875rem; }
+  .metric-value { font-size: 2.25rem; line-height: 1.3; }
+  .alert-text { color: var(--alert); font-weight: 600; }
+
+  .columns { display: grid; grid-template-columns: 3fr 2fr; gap: 2.5rem; margin-bottom: 2.5rem; }
+  .columns > * { min-width: 0; }
+
+  .table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: var(--radius); }
+  table { width: 100%; border-collapse: collapse; font-size: 0.875rem; }
+  th, td { padding: 0.45rem 0.65rem; border-bottom: 1px solid var(--line); border-right: 1px solid var(--line); text-align: left; white-space: nowrap; }
+  th { background: var(--widget); color: var(--ink-muted); font-weight: 400; }
+  tr > :last-child { border-right: 0; }
+  tbody tr:last-child > * { border-bottom: 0; }
+  .num { text-align: right; font-variant-numeric: tabular-nums; }
+
+  .chart { padding-top: 0.25rem; }
+  .bar-row { display: grid; grid-template-columns: 6rem minmax(0, 1fr); align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; font-size: 0.875rem; }
+  .bar-plot { position: relative; height: 1.6rem; background-image: linear-gradient(to right, var(--line) 1px, transparent 1px); background-size: 25% 100%; }
+  .bar { display: block; height: 100%; background: var(--field); border-radius: 0 4px 4px 0; }
+  .bar-plot:hover .bar-tip, .bar-plot:focus .bar-tip { display: block; }
+  .bar-tip {
+    display: none;
+    position: absolute;
+    left: 0.5rem;
+    top: 100%;
+    z-index: 1;
+    padding: 0.2rem 0.5rem;
+    background: var(--ink);
+    color: var(--page);
+    border-radius: var(--radius);
+    white-space: nowrap;
+  }
+  .axis { display: grid; grid-template-columns: 6rem minmax(0, 1fr); gap: 0.5rem; color: var(--ink-muted); font-size: 0.75rem; }
+  .axis-ticks { display: flex; justify-content: space-between; }
+
+  .widgets { display: flex; flex-wrap: wrap; gap: 1rem 2rem; align-items: flex-end; margin-bottom: 1.5rem; }
+  label { display: block; font-size: 0.875rem; margin-bottom: 0.25rem; }
+  select, input {
+    width: 100%;
+    padding: 0.5rem 0.6rem;
+    background: var(--widget);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    color: var(--ink);
+    font: inherit;
+  }
+  .widget { min-width: 13rem; }
+
+  details { border: 1px solid var(--line); border-radius: var(--radius); margin-top: 2rem; }
+  summary { padding: 0.75rem 1rem; cursor: pointer; }
+  .form-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; padding: 0.25rem 1rem 1rem; }
+  .form-actions { padding: 0 1rem 1rem; }
+  .button-primary {
+    padding: 0.5rem 1rem;
+    background: var(--field);
+    border: 1px solid var(--field);
+    border-radius: var(--radius);
+    color: #fff;
+    font: inherit;
+    cursor: pointer;
+  }
+
+  @media (max-width: 900px) {
+    .metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .columns { grid-template-columns: minmax(0, 1fr); }
+    main { padding: 2rem 1.5rem 3rem; }
+  }
+  @media (max-width: 640px) {
+    .app { grid-template-columns: minmax(0, 1fr); }
+    .metrics, .form-grid { grid-template-columns: minmax(0, 1fr); }
+    h1 { font-size: 2.1rem; }
+  }
+</style>
+</head>
+<body>
+<div class="app">
+  <nav class="sidebar" aria-label="Pages">
+    <button class="nav-link" data-view="overview" aria-current="page">Overview</button>
+    <p class="nav-section">Farm</p>
+    <button class="nav-link" data-view="fields">Fields</button>
+    <button class="nav-link" data-view="crops">Crops</button>
+    <button class="nav-link" data-view="livestock">Livestock</button>
+    <button class="nav-link" data-view="equipment">Equipment</button>
+    <button class="nav-link" data-view="workers">Workers</button>
+    <p class="nav-section">Money</p>
+    <button class="nav-link" data-view="sales">Sales</button>
+    <button class="nav-link" data-view="products">Products</button>
+  </nav>
+
+  <main>
+    <section data-page="overview">
+      <div class="page-head">
+        <h1>Overview</h1>
+        <p class="caption">Saturday, October 31</p>
+      </div>
+
+      <div class="metrics">
+        <div class="metric">
+          <!-- Total amount still owed across all bills. Past due counts unpaid bills with due_date before today. -->
+          <div class="metric-label">Unpaid bills</div>
+          <div class="metric-value">$18,420</div>
+          <p class="caption alert-text">6 past due</p>
+        </div>
+        <div class="metric">
+          <!-- Count of all orders with order_status = 'pending'. No date window. -->
+          <div class="metric-label">Orders to ship</div>
+          <div class="metric-value">11</div>
+        </div>
+        <div class="metric">
+          <!-- Count of plantings not harvested with expected_harvest_date in the next 14 days. -->
+          <div class="metric-label">Fields to harvest</div>
+          <div class="metric-value">4</div>
+        </div>
+        <div class="metric">
+          <!-- Count of animals with health_status other than 'healthy'. -->
+          <div class="metric-label">Animals needing care</div>
+          <div class="metric-value">3</div>
+        </div>
+      </div>
+
+      <div class="columns">
+        <div>
+          <h2>Upcoming harvests</h2>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Farm</th><th>Field</th><th>Crop</th><th class="num">Acres</th><th>Harvest date</th></tr></thead>
+              <tbody>
+                <tr><td>Willow Bend Farm</td><td>3</td><td>Sweet potato, Beauregard</td><td class="num">12.00</td><td>Nov 4</td></tr>
+                <tr><td>Willow Bend Farm</td><td>7</td><td>Winter squash, Butternut</td><td class="num">8.50</td><td>Nov 9</td></tr>
+                <tr><td>Cedar Creek Farm</td><td>2</td><td>Cabbage, Early Jersey</td><td class="num">6.25</td><td>Nov 12</td></tr>
+                <tr><td>Stony Hollow Farm</td><td>5</td><td>Broccoli, Waltham</td><td class="num">5.00</td><td>Nov 14</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div>
+          <h2>Sales by customer type</h2>
+          <div class="chart">
+            <div class="bar-row"><span>Distributor</span><div class="bar-plot" tabindex="0"><span class="bar" style="width:80.3%"></span><span class="bar-tip">$48,200</span></div></div>
+            <div class="bar-row"><span>Grocer</span><div class="bar-plot" tabindex="0"><span class="bar" style="width:52.8%"></span><span class="bar-tip">$31,650</span></div></div>
+            <div class="bar-row"><span>Restaurant</span><div class="bar-plot" tabindex="0"><span class="bar" style="width:29%"></span><span class="bar-tip">$17,380</span></div></div>
+            <div class="bar-row"><span>Individual</span><div class="bar-plot" tabindex="0"><span class="bar" style="width:11.5%"></span><span class="bar-tip">$6,920</span></div></div>
+            <div class="axis"><span></span><div class="axis-ticks"><span>$0</span><span>$30k</span><span>$60k</span></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section data-page="fields" hidden>
+      <div class="page-head">
+        <h1>Fields</h1>
+        <p class="caption">All plantings</p>
+      </div>
+
+      <div class="widgets">
+        <div class="widget">
+          <label for="fields-farm">Farm</label>
+          <select id="fields-farm"><option>All farms</option><option>Cedar Creek Farm</option><option>Stony Hollow Farm</option><option>Willow Bend Farm</option></select>
+        </div>
+        <div class="widget">
+          <label for="crop">Crop</label>
+          <select id="crop"><option>All crops</option><option>Winter wheat</option><option>Sweet potato</option><option>Winter squash</option><option>Cabbage</option><option>Broccoli</option></select>
+        </div>
+        <div class="widget">
+          <label for="fields-variety">Variety</label>
+          <select id="fields-variety"><option>All varieties</option><option>Hard red</option><option>Beauregard</option><option>Butternut</option><option>Early Jersey</option><option>Waltham</option></select>
+        </div>
+        <div class="widget">
+          <label for="fields-status">Growth status</label>
+          <select id="fields-status"><option>All statuses</option><option>Planted</option><option>Growing</option><option>Harvested</option></select>
+        </div>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Farm</th><th>Field</th><th>Crop</th><th class="num">Acres</th><th>Planted</th><th>Harvest date</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr><td>Willow Bend Farm</td><td>3</td><td>Sweet potato, Beauregard</td><td class="num">12.00</td><td>Jul 12</td><td>Nov 4</td><td>Growing</td></tr>
+            <tr><td>Willow Bend Farm</td><td>7</td><td>Winter squash, Butternut</td><td class="num">8.50</td><td>Jul 20</td><td>Nov 9</td><td>Growing</td></tr>
+            <tr><td>Cedar Creek Farm</td><td>2</td><td>Cabbage, Early Jersey</td><td class="num">6.25</td><td>Aug 1</td><td>Nov 12</td><td>Growing</td></tr>
+            <tr><td>Stony Hollow Farm</td><td>5</td><td>Broccoli, Waltham</td><td class="num">5.00</td><td>Aug 14</td><td>Nov 14</td><td>Growing</td></tr>
+            <tr><td>Cedar Creek Farm</td><td>9</td><td>Winter wheat, Hard red</td><td class="num">40.00</td><td>Oct 12</td><td>Jun 8</td><td>Planted</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <details>
+        <summary>Add a planting</summary>
+        <form>
+          <div class="form-grid">
+            <div><label for="new-farm">Farm</label><select id="new-farm"><option>Cedar Creek Farm</option><option>Stony Hollow Farm</option><option>Willow Bend Farm</option></select></div>
+            <div><label for="new-field">Field number</label><input id="new-field" type="number" min="1" value="4"></div>
+            <div><label for="new-crop">Crop</label><select id="new-crop"><option>Sweet potato, Beauregard</option><option>Winter wheat, Hard red</option></select></div>
+            <div><label for="new-acres">Acres</label><input id="new-acres" type="number" min="0" step="0.25" value="10"></div>
+            <div><label for="new-planted">Planting date</label><input id="new-planted" type="date" value="2026-10-31"></div>
+            <div><label for="new-harvest">Expected harvest date</label><input id="new-harvest" type="date" value="2027-06-01"></div>
+          </div>
+          <div class="form-actions"><button type="button" class="button-primary">Add planting</button></div>
+        </form>
+      </details>
+    </section>
+
+    <section data-page="crops" hidden>
+      <div class="page-head">
+        <h1>Crops</h1>
+        <p class="caption">Total acres planted by farm, crop, and variety</p>
+      </div>
+
+      <div class="widgets">
+        <div class="widget">
+          <label for="crops-farm">Farm</label>
+          <select id="crops-farm"><option>All farms</option><option>Cedar Creek Farm</option><option>Stony Hollow Farm</option><option>Willow Bend Farm</option></select>
+        </div>
+        <div class="widget">
+          <label for="crops-crop">Crop</label>
+          <select id="crops-crop"><option>All crops</option><option>Winter wheat</option><option>Sweet potato</option><option>Winter squash</option><option>Cabbage</option><option>Broccoli</option></select>
+        </div>
+        <div class="widget">
+          <label for="crops-variety">Variety</label>
+          <select id="crops-variety"><option>All varieties</option><option>Hard red</option><option>Beauregard</option><option>Butternut</option><option>Early Jersey</option><option>Waltham</option></select>
+        </div>
+        <div class="widget">
+          <label for="crops-status">Growth status</label>
+          <select id="crops-status"><option>All statuses</option><option>Planted</option><option>Growing</option><option>Harvested</option></select>
+        </div>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Farm</th><th>Crop</th><th>Variety</th><th class="num">Acres</th></tr></thead>
+          <tbody>
+            <tr><td>Cedar Creek Farm</td><td>Winter wheat</td><td>Hard red</td><td class="num">190.00</td></tr>
+            <tr><td>Cedar Creek Farm</td><td>Cabbage</td><td>Early Jersey</td><td class="num">14.25</td></tr>
+            <tr><td>Stony Hollow Farm</td><td>Winter wheat</td><td>Hard red</td><td class="num">120.00</td></tr>
+            <tr><td>Stony Hollow Farm</td><td>Broccoli</td><td>Waltham</td><td class="num">5.00</td></tr>
+            <tr><td>Willow Bend Farm</td><td>Sweet potato</td><td>Beauregard</td><td class="num">31.00</td></tr>
+            <tr><td>Willow Bend Farm</td><td>Winter squash</td><td>Butternut</td><td class="num">21.50</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section data-page="livestock" hidden>
+      <div class="page-head">
+        <h1>Livestock</h1>
+        <p class="caption">Total animals by farm, species, and breed</p>
+      </div>
+
+      <div class="widgets">
+        <div class="widget">
+          <label for="livestock-farm">Farm</label>
+          <select id="livestock-farm"><option>All farms</option><option>Cedar Creek Farm</option><option>Stony Hollow Farm</option><option>Willow Bend Farm</option></select>
+        </div>
+        <div class="widget">
+          <label for="livestock-species">Species</label>
+          <select id="livestock-species"><option>All species</option><option>Cattle</option><option>Chicken</option><option>Pig</option><option>Goat</option></select>
+        </div>
+        <div class="widget">
+          <label for="livestock-breed">Breed</label>
+          <select id="livestock-breed"><option>All breeds</option><option>Holstein</option><option>Angus</option><option>Rhode Island Red</option><option>Leghorn</option><option>Duroc</option><option>Nubian</option></select>
+        </div>
+        <div class="widget">
+          <label for="livestock-health">Health status</label>
+          <select id="livestock-health"><option>All statuses</option><option>Healthy</option><option>Sick</option><option>Injured</option><option>Under treatment</option></select>
+        </div>
+        <div class="widget">
+          <label for="livestock-purpose">Purpose</label>
+          <select id="livestock-purpose"><option>All purposes</option><option>Dairy</option><option>Meat</option><option>Breeding</option><option>Eggs</option></select>
+        </div>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Farm</th><th>Species</th><th>Breed</th><th class="num">Animals</th></tr></thead>
+          <tbody>
+            <tr><td>Cedar Creek Farm</td><td>Cattle</td><td>Holstein</td><td class="num">86</td></tr>
+            <tr><td>Cedar Creek Farm</td><td>Chicken</td><td>Rhode Island Red</td><td class="num">128</td></tr>
+            <tr><td>Stony Hollow Farm</td><td>Cattle</td><td>Angus</td><td class="num">104</td></tr>
+            <tr><td>Stony Hollow Farm</td><td>Pig</td><td>Duroc</td><td class="num">37</td></tr>
+            <tr><td>Willow Bend Farm</td><td>Chicken</td><td>Leghorn</td><td class="num">240</td></tr>
+            <tr><td>Willow Bend Farm</td><td>Goat</td><td>Nubian</td><td class="num">18</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <details>
+        <summary>Add an animal</summary>
+        <form>
+          <div class="form-grid">
+            <div><label for="new-animal-farm">Farm</label><select id="new-animal-farm"><option>Cedar Creek Farm</option><option>Stony Hollow Farm</option><option>Willow Bend Farm</option></select></div>
+            <div><label for="new-animal-species">Species</label><input id="new-animal-species" type="text" value="Cattle"></div>
+            <div><label for="new-animal-breed">Breed</label><input id="new-animal-breed" type="text" value="Holstein"></div>
+            <div><label for="new-animal-sex">Sex</label><select id="new-animal-sex"><option>Female</option><option>Male</option></select></div>
+            <div><label for="new-animal-birth">Birth date</label><input id="new-animal-birth" type="date" value="2026-03-15"></div>
+            <div><label for="new-animal-weight">Weight (lbs)</label><input id="new-animal-weight" type="number" min="0" step="0.5" value="400"></div>
+            <div><label for="new-animal-health">Health status</label><select id="new-animal-health"><option>Healthy</option><option>Sick</option><option>Injured</option><option>Under treatment</option></select></div>
+            <div><label for="new-animal-acquired">Acquisition date</label><input id="new-animal-acquired" type="date" value="2026-10-31"></div>
+            <div><label for="new-animal-purpose">Purpose</label><select id="new-animal-purpose"><option>Dairy</option><option>Meat</option><option>Breeding</option><option>Eggs</option></select></div>
+            <div><label for="new-animal-building">Building</label><select id="new-animal-building"><option>None</option><option>Main dairy barn</option><option>North coop</option></select></div>
+            <div><label for="new-animal-move-in">Move-in date</label><input id="new-animal-move-in" type="date" value="2026-10-31"></div>
+          </div>
+          <div class="form-actions"><button type="button" class="button-primary">Add animal</button></div>
+        </form>
+      </details>
+    </section>
+
+    <section data-page="equipment" hidden>
+      <div class="page-head">
+        <h1>Equipment</h1>
+        <p class="caption">All equipment</p>
+      </div>
+
+      <div class="widgets">
+        <div class="widget">
+          <label for="equipment-farm">Farm</label>
+          <select id="equipment-farm"><option>All farms</option><option>Cedar Creek Farm</option><option>Stony Hollow Farm</option><option>Willow Bend Farm</option></select>
+        </div>
+        <div class="widget">
+          <label for="equipment-name">Equipment</label>
+          <select id="equipment-name"><option>All equipment</option><option>North field tractor</option><option>Main combine</option><option>Grain trailer</option><option>Utility tractor</option><option>Center pivot</option><option>Greenhouse drip system</option></select>
+        </div>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Farm</th><th class="num">ID</th><th>Equipment</th><th>Type</th><th>Manufacturer</th><th>Model</th><th>Serial number</th><th>Purchased</th><th class="num">Price</th><th>Condition</th><th>Last service</th></tr></thead>
+          <tbody>
+            <tr><td>Cedar Creek Farm</td><td class="num">1</td><td>North field tractor</td><td>Tractor</td><td>John Deere</td><td>6120M</td><td>JD6120M-10482</td><td>2019-03-14</td><td class="num">$118,500</td><td>Operational</td><td>2026-08-20</td></tr>
+            <tr><td>Cedar Creek Farm</td><td class="num">2</td><td>Main combine</td><td>Harvester</td><td>Case IH</td><td>Axial-Flow 7250</td><td>CIH7250-22817</td><td>2017-07-02</td><td class="num">$412,000</td><td>Operational</td><td>2026-09-05</td></tr>
+            <tr><td>Cedar Creek Farm</td><td class="num">3</td><td>Grain trailer</td><td>Trailer</td><td>Wilson</td><td>Pacesetter</td><td>WIL-PS-50311</td><td>2015-05-20</td><td class="num">$54,000</td><td>In repair</td><td>2026-10-12</td></tr>
+            <tr><td>Stony Hollow Farm</td><td class="num">4</td><td>Utility tractor</td><td>Tractor</td><td>Kubota</td><td>M7060</td><td>KUB7060-66120</td><td>2021-04-09</td><td class="num">$46,800</td><td>Operational</td><td>2026-06-18</td></tr>
+            <tr><td>Stony Hollow Farm</td><td class="num">5</td><td>Center pivot</td><td>Irrigation</td><td>Valley</td><td>8000 Series</td><td>VAL8K-90215</td><td>2014-04-01</td><td class="num">$87,500</td><td>Operational</td><td>2026-04-22</td></tr>
+            <tr><td>Willow Bend Farm</td><td class="num">8</td><td>Greenhouse drip system</td><td>Irrigation</td><td>Netafim</td><td>DripNet PC</td><td>NET-DN-31876</td><td>2018-05-16</td><td class="num">$12,400</td><td>Operational</td><td>2026-03-11</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <details>
+        <summary>Add equipment</summary>
+        <form>
+          <div class="form-grid">
+            <div><label for="new-equipment-farm">Farm</label><select id="new-equipment-farm"><option>Cedar Creek Farm</option><option>Stony Hollow Farm</option><option>Willow Bend Farm</option></select></div>
+            <div><label for="new-equipment-name">Equipment name</label><input id="new-equipment-name" type="text" value="South field tractor"></div>
+            <div><label for="new-equipment-type">Type</label><select id="new-equipment-type"><option>Tractor</option><option>Harvester</option><option>Irrigation</option><option>Trailer</option></select></div>
+            <div><label for="new-equipment-manufacturer">Manufacturer</label><input id="new-equipment-manufacturer" type="text" value="Kubota"></div>
+            <div><label for="new-equipment-model">Model</label><input id="new-equipment-model" type="text" value="M5-111"></div>
+            <div><label for="new-equipment-serial">Serial number</label><input id="new-equipment-serial" type="text" value="KUB-20417"></div>
+            <div><label for="new-equipment-purchased">Purchase date</label><input id="new-equipment-purchased" type="date" value="2026-10-31"></div>
+            <div><label for="new-equipment-price">Purchase price</label><input id="new-equipment-price" type="number" min="0" step="100" value="61000"></div>
+            <div><label for="new-equipment-condition">Condition</label><select id="new-equipment-condition"><option>Operational</option><option>In repair</option><option>Retired</option></select></div>
+            <div><label for="new-equipment-service">Last service date</label><input id="new-equipment-service" type="date"></div>
+            <div><label for="new-equipment-building">Building</label><select id="new-equipment-building"><option>None</option><option>Machine shed</option></select></div>
+          </div>
+          <div class="form-actions"><button type="button" class="button-primary">Add equipment</button></div>
+        </form>
+      </details>
+    </section>
+
+    <section data-page="sales" hidden>
+      <div class="page-head">
+        <h1>Sales</h1>
+        <p class="caption">Delivered orders</p>
+      </div>
+
+      <div class="widgets">
+        <div class="widget">
+          <label for="sales-farm">Farm</label>
+          <select id="sales-farm"><option>All farms</option><option>Cedar Creek Farm</option><option>Stony Hollow Farm</option><option>Willow Bend Farm</option></select>
+        </div>
+        <div class="widget">
+          <label for="from">From</label>
+          <input id="from" type="date" value="2026-01-01">
+        </div>
+        <div class="widget">
+          <label for="to">To</label>
+          <input id="to" type="date" value="2026-10-31">
+        </div>
+        <div class="widget">
+          <label for="category">Product category</label>
+          <select id="category"><option>All categories</option><option>Produce</option><option>Grain</option><option>Dairy</option><option>Meat</option><option>Eggs</option><option>Livestock</option></select>
+        </div>
+      </div>
+
+      <div class="columns">
+        <div>
+          <h2>By farm and customer type</h2>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Farm</th><th>Customer type</th><th class="num">Orders</th><th class="num">Average order</th><th class="num">Total sales</th></tr></thead>
+              <tbody>
+                <tr><td>Cedar Creek Farm</td><td>Distributor</td><td class="num">15</td><td class="num">$2,007</td><td class="num">$30,100</td></tr>
+                <tr><td>Cedar Creek Farm</td><td>Grocer</td><td class="num">23</td><td class="num">$826</td><td class="num">$19,000</td></tr>
+                <tr><td>Stony Hollow Farm</td><td>Distributor</td><td class="num">9</td><td class="num">$2,011</td><td class="num">$18,100</td></tr>
+                <tr><td>Willow Bend Farm</td><td>Grocer</td><td class="num">15</td><td class="num">$843</td><td class="num">$12,650</td></tr>
+                <tr><td>Stony Hollow Farm</td><td>Restaurant</td><td class="num">24</td><td class="num">$424</td><td class="num">$10,180</td></tr>
+                <tr><td>Willow Bend Farm</td><td>Restaurant</td><td class="num">17</td><td class="num">$424</td><td class="num">$7,200</td></tr>
+                <tr><td>Willow Bend Farm</td><td>Individual</td><td class="num">37</td><td class="num">$111</td><td class="num">$4,120</td></tr>
+                <tr><td>Cedar Creek Farm</td><td>Individual</td><td class="num">25</td><td class="num">$112</td><td class="num">$2,800</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div>
+          <h2>Total sales</h2>
+          <div class="chart">
+            <div class="bar-row"><span>Distributor</span><div class="bar-plot" tabindex="0"><span class="bar" style="width:80.3%"></span><span class="bar-tip">$48,200</span></div></div>
+            <div class="bar-row"><span>Grocer</span><div class="bar-plot" tabindex="0"><span class="bar" style="width:52.8%"></span><span class="bar-tip">$31,650</span></div></div>
+            <div class="bar-row"><span>Restaurant</span><div class="bar-plot" tabindex="0"><span class="bar" style="width:29%"></span><span class="bar-tip">$17,380</span></div></div>
+            <div class="bar-row"><span>Individual</span><div class="bar-plot" tabindex="0"><span class="bar" style="width:11.5%"></span><span class="bar-tip">$6,920</span></div></div>
+            <div class="axis"><span></span><div class="axis-ticks"><span>$0</span><span>$30k</span><span>$60k</span></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section data-page="products" hidden>
+      <div class="page-head">
+        <h1>Products</h1>
+        <p class="caption">Stock on hand by farm and product</p>
+      </div>
+
+      <div class="widgets">
+        <div class="widget">
+          <label for="products-farm">Farm</label>
+          <select id="products-farm"><option>All farms</option><option>Cedar Creek Farm</option><option>Stony Hollow Farm</option><option>Willow Bend Farm</option></select>
+        </div>
+        <div class="widget">
+          <label for="products-category">Product category</label>
+          <select id="products-category"><option>All categories</option><option>Produce</option><option>Grain</option><option>Dairy</option><option>Meat</option><option>Eggs</option><option>Livestock</option></select>
+        </div>
+        <div class="widget">
+          <label for="products-product">Product</label>
+          <select id="products-product"><option>All products</option><option>Yellow corn</option><option>Whole milk</option><option>Brown eggs</option><option>Ground beef</option><option>Feeder calf</option><option>Tomatoes</option><option>Sweet potatoes</option></select>
+        </div>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Farm</th><th>Product</th><th>Category</th><th>Unit</th><th class="num">List price</th><th class="num">On hand</th></tr></thead>
+          <tbody>
+            <tr><td>Cedar Creek Farm</td><td>Yellow corn</td><td>Grain</td><td>Bushel</td><td class="num">$4.60</td><td class="num">18,400</td></tr>
+            <tr><td>Cedar Creek Farm</td><td>Whole milk</td><td>Dairy</td><td>Gallon</td><td class="num">$5.25</td><td class="num">650</td></tr>
+            <tr><td>Cedar Creek Farm</td><td>Brown eggs</td><td>Eggs</td><td>Dozen</td><td class="num">$4.50</td><td class="num">420</td></tr>
+            <tr><td>Stony Hollow Farm</td><td>Ground beef</td><td>Meat</td><td>Lb</td><td class="num">$6.75</td><td class="num">1,275</td></tr>
+            <tr><td>Stony Hollow Farm</td><td>Feeder calf</td><td>Livestock</td><td>Head</td><td class="num">$1,450.00</td><td class="num">34</td></tr>
+            <tr><td>Willow Bend Farm</td><td>Tomatoes</td><td>Produce</td><td>Lb</td><td class="num">$2.50</td><td class="num">960</td></tr>
+            <tr><td>Willow Bend Farm</td><td>Sweet potatoes</td><td>Produce</td><td>Lb</td><td class="num">$1.20</td><td class="num">5,200</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section data-page="workers" hidden>
+      <div class="page-head">
+        <h1>Workers</h1>
+        <p class="caption">All workers</p>
+      </div>
+
+      <div class="widgets">
+        <div class="widget">
+          <label for="workers-farm">Farm</label>
+          <select id="workers-farm"><option>All farms</option><option>Cedar Creek Farm</option><option>Stony Hollow Farm</option><option>Willow Bend Farm</option></select>
+        </div>
+        <div class="widget">
+          <label for="workers-name">Worker</label>
+          <select id="workers-name"><option>All workers</option><option>Elena Marsh</option><option>Tom Okafor</option><option>Lucy Hart</option><option>Ben Sorensen</option><option>Rosa Delgado</option><option>Mei Tanaka</option></select>
+        </div>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Farm</th><th class="num">ID</th><th>First name</th><th>Last name</th><th>Job title</th><th>Hired</th><th class="num">Hourly wage</th><th>Employment type</th><th>Phone</th><th>Email</th></tr></thead>
+          <tbody>
+            <tr><td>Cedar Creek Farm</td><td class="num">1</td><td>Elena</td><td>Marsh</td><td>Manager</td><td>2011-03-07</td><td class="num">$32.50</td><td>Full time</td><td>515-555-0161</td><td>elena.marsh@example.com</td></tr>
+            <tr><td>Cedar Creek Farm</td><td class="num">2</td><td>Tom</td><td>Okafor</td><td>Equipment operator</td><td>2017-05-22</td><td class="num">$24.00</td><td>Full time</td><td>515-555-0162</td><td>tom.okafor@example.com</td></tr>
+            <tr><td>Cedar Creek Farm</td><td class="num">3</td><td>Lucy</td><td>Hart</td><td>Livestock handler</td><td>2021-08-16</td><td class="num">$19.75</td><td>Full time</td><td>515-555-0163</td><td>lucy.hart@example.com</td></tr>
+            <tr><td>Stony Hollow Farm</td><td class="num">4</td><td>Ben</td><td>Sorensen</td><td>Manager</td><td>2008-02-11</td><td class="num">$34.00</td><td>Full time</td><td>308-555-0164</td><td>ben.sorensen@example.com</td></tr>
+            <tr><td>Stony Hollow Farm</td><td class="num">5</td><td>Rosa</td><td>Delgado</td><td>Livestock handler</td><td>2019-04-29</td><td class="num">$20.50</td><td>Full time</td><td>308-555-0165</td><td>rosa.delgado@example.com</td></tr>
+            <tr><td>Willow Bend Farm</td><td class="num">7</td><td>Mei</td><td>Tanaka</td><td>Manager</td><td>2014-06-02</td><td class="num">$30.00</td><td>Full time</td><td>785-555-0167</td><td>mei.tanaka@example.com</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <details>
+        <summary>Add a worker</summary>
+        <form>
+          <div class="form-grid">
+            <div><label for="new-worker-farm">Farm</label><select id="new-worker-farm"><option>Cedar Creek Farm</option><option>Stony Hollow Farm</option><option>Willow Bend Farm</option></select></div>
+            <div><label for="new-worker-first">First name</label><input id="new-worker-first" type="text" value="Amy"></div>
+            <div><label for="new-worker-last">Last name</label><input id="new-worker-last" type="text" value="Reed"></div>
+            <div><label for="new-worker-title">Job title</label><select id="new-worker-title"><option>Equipment operator</option><option>Livestock handler</option><option>Field hand</option><option>Mechanic</option><option>Manager</option></select></div>
+            <div><label for="new-worker-hired">Hire date</label><input id="new-worker-hired" type="date" value="2026-10-31"></div>
+            <div><label for="new-worker-wage">Hourly wage</label><input id="new-worker-wage" type="number" min="0" step="0.25" value="18"></div>
+            <div><label for="new-worker-type">Employment type</label><select id="new-worker-type"><option>Full time</option><option>Part time</option><option>Seasonal</option></select></div>
+            <div><label for="new-worker-phone">Phone</label><input id="new-worker-phone" type="tel" value="515-555-0199"></div>
+            <div><label for="new-worker-email">Email</label><input id="new-worker-email" type="email" value="amy.reed@example.com"></div>
+          </div>
+          <div class="form-actions"><button type="button" class="button-primary">Add worker</button></div>
+        </form>
+      </details>
+    </section>
+  </main>
+</div>
+
+<script>
+  const navLinks = document.querySelectorAll(".nav-link");
+  const pages = document.querySelectorAll("[data-page]");
+
+  navLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      navLinks.forEach((other) => other.removeAttribute("aria-current"));
+      link.setAttribute("aria-current", "page");
+      pages.forEach((page) => { page.hidden = page.dataset.page !== link.dataset.view; });
+    });
+  });
+</script>
+</body>
+</html>
