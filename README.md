@@ -9,12 +9,11 @@ Everything that goes in the zip file. See `submission/README.md` for how to run 
 - `code/setup_db.py`: creates the conda environment and Postgres container, loads the data, and starts the container
 - `code/reset_db.py`: restores the database to the original data
 - `code/schema.sql`: table definitions
-- `data/insertion.sql`: data loaded into the tables
+- `data/insertion.sql`: synthetic data loaded into the tables
 
 ## mockups/
 
 - `ui_mockup_a.html`: sidebar layout, with all tabs built
-- `ui_mockup_b.html`: top navigation layout
 
 Open either file in a browser.
 
