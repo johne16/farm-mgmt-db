@@ -1,0 +1,83 @@
+fields tab example
+
+select f.farm_name, p.field_number, c.crop_name, c.variety, p.acres_planted, p.planting_date, p.expected_harvest_date, p.growth_status
+from Plantings p
+join Farms f on f.farm_id = p.farm_id
+join Crops c on c.crop_id = p.crop_id
+where f.farm_name = 'farm';
+
+
+crops tab example
+
+select f.farm_name, c.crop_name, sum(p.acres_planted) as acres
+from plantings p, crops c, farms f
+where f.farm_id = '123'
+and c.crop_name = 'squash'
+and p.farm_id = f.farm_id
+and p.crop_id = c.crop_id
+and p.growth_status <> 'harvested'
+group by f.farm_name, c.crop_name;
+
+
+livestock tab example
+
+select f.farm_name, a.species, a.breed, count(*) as animals
+from Animals a
+join Farms f on f.farm_id = a.farm_id
+where f.farm_name = 'farm'
+and a.species = 'species'
+and a.breed = 'breed'
+and a.health_status = 'health status'
+and a.purpose = 'purpose'
+group by f.farm_name, a.species, a.breed;
+
+
+equipment tab example
+
+select f.farm_name, e.equipment_id, e.equipment_name, e.equipment_type, e.manufacturer, e.model, e.serial_number, e.purchase_date, e.purchase_price, e.condition_status, e.last_service_date
+from Equipment e
+join Farms f on f.farm_id = e.farm_id
+where f.farm_name = 'farm'
+and e.name = 'equipment';
+
+
+workers tab example
+
+select f.farm_name, w.worker_id, w.first_name, w.last_name, w.job_title, w.hire_date, w.hourly_wage, w.employment_type, w.phone, w.email
+from Workers w
+join Farms f on f.farm_id = w.farm_id
+where f.farm_name = 'farm'
+and w.first_name = 'first'
+and w.last_name = 'last';
+
+
+sales tab example
+
+select f.farm_name,
+       cu.customer_type,
+       count(distinct o.order_id) as orders,
+       sum(c.quantity * c.unit_price) / count(distinct o.order_id) as average_order,
+       sum(c.quantity * c.unit_price) as total_sales
+from Orders o
+join Farms f on f.farm_id = o.farm_id
+join Customers cu on cu.customer_id = o.customer_id
+join Contains c on c.order_id = o.order_id
+where o.order_status = 'delivered'
+and o.delivery_date >= from
+and o.delivery_date <= to
+group by f.farm_name, cu.customer_type
+order by total_sales desc;
+
+
+products tab example
+
+select f.farm_name, p.product_name, p.product_category, p.unit_of_measure, p.list_price, s.quantity_on_hand
+from Stocks s
+join Farms f on f.farm_id = s.farm_id
+join Products p on p.product_id = s.product_id
+where f.farm_name = 'farm'
+and p.product_category = 'category'
+and p.product_name = 'product';
+
+
+
