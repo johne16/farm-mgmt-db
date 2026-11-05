@@ -5,3 +5,4 @@ dependencies:
   - python
   - streamlit
   - psycopg2
+  - starlette<1.8

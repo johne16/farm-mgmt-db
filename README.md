@@ -5,9 +5,14 @@
 Everything that goes in the zip file. See `submission/README.md` for how to run it.
 
 - `environment.yml`: conda environment
-- `code/app.py`: main entry point, currently an outline
+- `.streamlit/config.toml`: Streamlit theme
+- `code/app.py`: main entry point; runs setup, starts Streamlit, and stops the container when the app exits
 - `code/setup_db.py`: creates the conda environment and Postgres container, loads the data, and starts the container
 - `code/reset_db.py`: restores the database to the original data
+- `code/project.py`: Streamlit navigation
+- `code/pages/`: one file per app page
+- `code/helpers.py`: database connection and shared page functions
+- `code/queries.py`: SQL queries used by the pages and helpers
 - `code/schema.sql`: table definitions
 - `data/insertion.sql`: synthetic data loaded into the tables
 

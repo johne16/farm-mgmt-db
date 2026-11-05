@@ -1,0 +1,18 @@
+[theme]
+base = "light"
+primaryColor = "#2e6b45"
+backgroundColor = "#f6f8f3"
+secondaryBackgroundColor = "#e7ede2"
+textColor = "#1c2a21"
+borderColor = "#cbd6c6"
+redColor = "#b3261e"
+baseRadius = "4px"
+font = "'Public Sans':https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600&display=swap, sans-serif"
+headingFont = "'Zilla Slab':https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@500;600&display=swap, serif"
+
+[theme.sidebar]
+primaryColor = "#eaf0e6"
+backgroundColor = "#22362b"
+secondaryBackgroundColor = "#35503f"
+textColor = "#eaf0e6"
+borderColor = "#35503f"

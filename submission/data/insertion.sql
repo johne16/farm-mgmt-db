@@ -6,9 +6,7 @@ insert into Farms (farm_id, farm_name, street_address, city, state, zip_code, to
  (5, 'Blue Heron Dairy', '6620 Ridge Road', 'Viroqua', 'WI', '54665', 320.00, '1996-05-01', '608-555-0105'),
  (6, 'Lone Oak Farm', '1192 Oak Street', 'Mankato', 'MN', '56001', 410.75, '2001-08-20', '507-555-0106'),
  (7, 'Harvest Moon Acres', '755 Township Road 40', 'Wooster', 'OH', '44691', 275.00, '2010-02-11', '330-555-0107'),
- (8, 'Maple Run Farm', '3304 Maple Run', 'Goshen', 'IN', '46526', 198.25, '2013-10-07', '574-555-0108'),
- (9, 'Red Barn Farm', '5078 Prairie Road', 'Decatur', 'IL', '62521', 520.00, '1982-07-29', '217-555-0109'),
- (10, 'Silver Creek Farm', '2467 Creek Road', 'Brookings', 'SD', '57006', 730.00, '1974-11-18', '605-555-0110');
+ (8, 'Maple Run Farm', '3304 Maple Run', 'Goshen', 'IN', '46526', 198.25, '2013-10-07', '574-555-0108');
 
 insert into Crops (crop_id, crop_name, variety, yield_unit) values
  (1, 'Corn', 'Golden Bantam', 'bushels'),
@@ -112,7 +110,7 @@ insert into Plantings (planting_id, field_number, acres_planted, planting_date, 
  (9, 5, 40.00, '2026-04-10', '2026-07-15', '2026-07-19', 2640.00, 'harvested', 6, 4),
  (10, 2, 6.25, '2026-08-01', '2026-11-12', null, null, 'growing', 7, 9),
  (11, 8, 18.00, '2026-05-20', '2026-09-20', '2026-09-24', 720000.00, 'harvested', 8, 10),
- (12, 3, 200.00, '2026-05-01', '2026-10-10', '2026-10-15', 34000.00, 'harvested', 9, 1);
+ (12, 3, 200.00, '2026-05-01', '2026-10-10', '2026-10-15', 34000.00, 'harvested', 8, 1);
 
 insert into Workers (worker_id, first_name, last_name, job_title, hire_date, hourly_wage, employment_type, phone, email, farm_id) values
  (1, 'Elena', 'Marsh', 'manager', '2011-03-07', 32.50, 'full time', '515-555-0161', 'elena.marsh@example.com', 1),
@@ -269,21 +267,6 @@ select * from (values
  (11, 'Goat', 'Boer', 'meat', 'barn', 170.00, 900)
 ) as t(breed_id, species, breed, purpose, home_type, base_weight, max_age_days);
 
-insert into Farms (farm_id, farm_name, street_address, city, state, zip_code, total_acres, established_date, phone)
-select
- i,
- name_stems[1 + i % cardinality(name_stems)] || ' ' || name_endings[1 + i % cardinality(name_endings)] || ' Farm',
- (100 + i * 37 % 8000)::text || ' ' || street_names[1 + i % cardinality(street_names)],
- city,
- state,
- zip_code,
- 80 + i * 73 % 1900 + (i % 4) * 0.25,
- date '1955-01-01' + i * 397 % 24000,
- area_code || '-555-01' || lpad((i % 100)::text, 2, '0')
-from generate_series(11, 100) as i
-join Towns on town_id = i % 20
-cross join Word_lists;
-
 insert into Crops (crop_id, crop_name, variety, yield_unit)
 select 10 + row_number() over (), crop_name, variety, yield_unit
 from (values
@@ -388,7 +371,7 @@ select
  case building_type when 'barn' then 'animals' when 'silo' then 'bushels' when 'greenhouse' then 'tons' when 'storage shed' then 'machines' else 'animals' end,
  1960 + i * 41 % 64,
  (array['good', 'good', 'fair', 'good', 'poor'])[1 + i * 3 % 5],
- 1 + i % 37
+ 1 + i % 8
 from generate_series(13, 100) as i
 cross join lateral (select (array['barn', 'silo', 'greenhouse', 'storage shed', 'coop'])[1 + i % 5] as building_type) as types;
 
@@ -413,7 +396,7 @@ from generate_series(13, 100) as i
 join Equipment_models on model_id = i % 16
 cross join lateral (
  select
-  1 + i % 37 as farm_id,
+  1 + i / 11 % 8 as farm_id,
   date '2008-01-01' + i * 311 % 6500 as purchase_date,
   case when i % 11 = 0 then 'retired' when i % 7 = 0 then 'in repair' else 'operational' end as condition_status
 ) as dates;
@@ -436,9 +419,9 @@ from generate_series(13, 100) as i
 join Animal_breeds on breed_id = i % 12
 cross join lateral (
  select
-  1 + i % 37 as farm_id,
+  1 + i / 12 % 8 as farm_id,
   date '2026-09-01' - (120 + i * 37 % max_age_days) as birth_date,
-  (select min(b.building_id) from Buildings as b where b.farm_id = 1 + i % 37 and b.building_type = home_type) as building_id
+  (select min(b.building_id) from Buildings as b where b.farm_id = 1 + i / 12 % 8 and b.building_type = home_type) as building_id
 ) as details;
 
 insert into Plantings (planting_id, field_number, acres_planted, planting_date, expected_harvest_date, actual_harvest_date, yield_amount, growth_status, farm_id, crop_id)
@@ -456,7 +439,7 @@ select
  case when expected_harvest_date + 5 <= date '2026-10-31' then 'harvested'
   when date '2026-10-31' - planting_date >= 14 and crop_name <> 'Winter wheat' then 'growing'
   else 'planted' end,
- 1 + i % 61,
+ 1 + i % 8,
  crop_id
 from generate_series(13, 100) as i
 join Crops on crop_id = 1 + i % (select count(*) from Crops)
@@ -482,7 +465,7 @@ select
  employment_type,
  area_code || '-555-01' || lpad((i * 9 % 100)::text, 2, '0'),
  lower(first_names[1 + i * 5 % cardinality(first_names)] || '.' || last_names[1 + i * 3 % cardinality(last_names)]) || i || '@example.com',
- 1 + i % 61
+ 1 + i / 8 % 8
 from generate_series(13, 100) as i
 join Towns on town_id = i % 20
 cross join Word_lists
@@ -504,7 +487,7 @@ select
   when order_status = 'pending' and i % 3 = 0 then 'paid'
   else 'unpaid' end,
  1 + i * 7 % 100,
- 1 + i % 61
+ 1 + i % 8
 from generate_series(13, 100) as i
 cross join lateral (select i * 17 % 360 as age_days) as ages
 cross join lateral (
@@ -518,7 +501,7 @@ select
  date '2026-10-25' - i * 19 % 420,
  date '2026-10-25' - i * 19 % 420 + 30,
  (array[3000, 2500, 900, 1200, 600])[1 + i % 5] + i * 67 % 3000 + (i % 4) * 0.25,
- 1 + i % 61,
+ 1 + i % 8,
  11 + (i % 5 + 4) % 5 + 5 * (i % 18)
 from generate_series(13, 100) as i;
 
@@ -542,8 +525,8 @@ from (
 
 insert into Stocks (farm_id, product_id, quantity_on_hand)
 select farm_id, 1 + (farm_id * 7 + k * 13) % 100, 20 + (farm_id * 97 + k * 41) % 4000
-from generate_series(1, 61) as farm_id
-cross join generate_series(0, 2) as k
+from generate_series(1, 8) as farm_id
+cross join generate_series(0, 12) as k
 on conflict do nothing;
 
 insert into Contains (order_id, product_id, quantity, unit_price)
