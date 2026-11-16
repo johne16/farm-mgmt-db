@@ -1,3 +1,5 @@
+from pathlib import Path
+
 import streamlit as st
 
 import queries
@@ -13,51 +15,63 @@ from helpers import (
     where_clause,
 )
 
-page_head("Crops", "Total acres planted by farm, crop, and variety")
+er_diagram_file = Path(__file__).resolve().parent.parent / "er_diagrams" / "crops.svg"
 
-farms = farm_labels()
-filter_columns = st.columns(4)
-farm_id = option_select(
-    filter_columns[0], "Farm", "All farms", farms, farms, key="crops_farm"
-)
-crop_name = option_select(
-    filter_columns[1],
-    "Crop",
-    "All crops",
-    distinct_values("crop_name", "Crops"),
-    key="crops_crop",
-)
-variety = option_select(
-    filter_columns[2],
-    "Variety",
-    "All varieties",
-    crop_varieties(crop_name),
-    key="crops_variety",
-)
-growth_status = option_select(
-    filter_columns[3],
-    "Growth status",
-    "All statuses",
-    growth_statuses,
-    key="crops_status",
-)
+if st.session_state.get("show_er_diagram", False):
+    page_column, er_diagram_column = st.columns(2, gap="large")
+    er_diagram_column.image(str(er_diagram_file), width="stretch")
+else:
+    page_column = st.container()
 
-conditions = []
-params = []
-if farm_id is not None:
-    conditions.append("p.farm_id = %s")
-    params.append(farm_id)
-if crop_name is not None:
-    conditions.append("c.crop_name = %s")
-    params.append(crop_name)
-if variety is not None:
-    conditions.append("c.variety = %s")
-    params.append(variety)
-if growth_status is not None:
-    conditions.append("p.growth_status = %s")
-    params.append(growth_status)
+with page_column:
+    page_head("Crops", "Total acres planted by farm, crop, and variety")
 
-acres = run_query(queries.crops_acres.format(where=where_clause(conditions)), params)
-show_table(
-    st, acres, column_config={"Acres": st.column_config.NumberColumn(format="%.2f")}
-)
+    farms = farm_labels()
+    filter_columns = st.columns(4)
+    farm_id = option_select(
+        filter_columns[0], "Farm", "All farms", farms, farms, key="crops_farm"
+    )
+    crop_name = option_select(
+        filter_columns[1],
+        "Crop",
+        "All crops",
+        distinct_values("crop_name", "Crops"),
+        key="crops_crop",
+    )
+    variety = option_select(
+        filter_columns[2],
+        "Variety",
+        "All varieties",
+        crop_varieties(crop_name),
+        key="crops_variety",
+    )
+    growth_status = option_select(
+        filter_columns[3],
+        "Growth status",
+        "All statuses",
+        growth_statuses,
+        key="crops_status",
+    )
+
+    conditions = []
+    params = []
+    if farm_id is not None:
+        conditions.append("p.farm_id = %s")
+        params.append(farm_id)
+    if crop_name is not None:
+        conditions.append("c.crop_name = %s")
+        params.append(crop_name)
+    if variety is not None:
+        conditions.append("c.variety = %s")
+        params.append(variety)
+    if growth_status is not None:
+        conditions.append("p.growth_status = %s")
+        params.append(growth_status)
+
+    acres = run_query(queries.crops_acres.format(where=where_clause(conditions)), params)
+    show_table(
+        st, acres, column_config={"Acres": st.column_config.NumberColumn(format="%.2f")}
+    )
+
+with st.container(horizontal=True, horizontal_alignment="right"):
+    st.toggle("ER diagram", key="show_er_diagram")

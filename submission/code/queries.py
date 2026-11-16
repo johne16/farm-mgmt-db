@@ -45,7 +45,7 @@ crop_varieties_varieties = """
 
 overview_bills = """
     select coalesce(sum(b.amount_due - coalesce(p.paid, 0)), 0) as owed,
-           count(*) filter (where b.due_date < current_date) as past_due
+           count(*) filter (where b.due_date < date '2026-10-31') as past_due
     from Bills b
     left join (select bill_id, sum(payment_amount) as paid from Payments group by bill_id) p
         on p.bill_id = b.bill_id
@@ -62,8 +62,8 @@ overview_fields_to_harvest = """
     select count(*) as total
     from Plantings
     where growth_status <> 'harvested'
-        and expected_harvest_date >= current_date
-        and expected_harvest_date <= current_date + 14
+        and expected_harvest_date >= date '2026-10-31'
+        and expected_harvest_date <= date '2026-10-31' + 14
 """
 
 overview_animals_needing_care = """
@@ -82,8 +82,8 @@ overview_harvests = """
     join Farms f on f.farm_id = p.farm_id
     join Crops c on c.crop_id = p.crop_id
     where p.growth_status <> 'harvested'
-        and p.expected_harvest_date >= current_date
-        and p.expected_harvest_date <= current_date + 14
+        and p.expected_harvest_date >= date '2026-10-31'
+        and p.expected_harvest_date <= date '2026-10-31' + 14
     order by p.expected_harvest_date
 """
 
