@@ -9,7 +9,8 @@ from pathlib import Path
 project_dir = Path(__file__).resolve().parent.parent
 environment_file = project_dir / "environment.yml"
 schema_file = project_dir / "code" / "schema.sql"
-insertion_file = project_dir / "data" / "insertion.sql"
+data_dir = project_dir / "data"
+insertion_file = data_dir / "insertion.sql"
 
 env_name = "farm_mgmt"
 container_name = "farm_mgmt_db"
@@ -88,6 +89,7 @@ def create_container(docker_path):
     ]
     if insertion_file.exists():
         command += ["--mount", f"type=bind,src={insertion_file},dst=/docker-entrypoint-initdb.d/02_insertion.sql"]
+        command += ["--mount", f"type=bind,src={data_dir},dst=/farm_data,readonly"]
     command.append(postgres_image)
     if subprocess.run(command).returncode != 0:
         sys.exit("Failed: Postgres container was not created.")

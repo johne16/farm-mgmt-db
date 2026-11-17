@@ -1,0 +1,9 @@
+farm_id,farm_name,street_address,city,state,zip_code,total_acres,established_date,phone
+1,Fox Brook Farm,1389 Mill Road,Ames,IA,50010,323.25,1967-06-04,515-555-0101
+2,Laurel Crossing Farm,1778 Church Street,Kearney,NE,68847,496.50,1974-11-05,308-555-0102
+3,Rolling Field Farm,2167 Highway 20,Salina,KS,67401,669.75,1982-04-08,785-555-0103
+4,Elm Glen Farm,2556 Prairie Avenue,Sedalia,MO,65301,842.00,1989-09-09,660-555-0104
+5,Juniper Grove Farm,2945 River Road,Viroqua,WI,54665,1015.25,1997-02-10,608-555-0105
+6,Quail Haven Farm,3334 Orchard Lane,Mankato,MN,56001,1188.50,2004-07-14,507-555-0106
+7,Dogwood Hill Farm,3723 Depot Street,Wooster,OH,44691,161.75,2011-12-16,330-555-0107
+8,Ivy Knoll Farm,4112 Township Road 8,Goshen,IN,46526,334.00,1964-08-15,574-555-0108

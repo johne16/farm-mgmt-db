@@ -1,0 +1,101 @@
+crop_id,crop_name,variety,yield_unit
+1,Corn,Golden Bantam,bushels
+2,Soybeans,Williams 82,bushels
+3,Winter wheat,Hard Red,bushels
+4,Oats,Horizon,bushels
+5,Alfalfa,Vernal,tons
+6,Sweet potato,Beauregard,lbs
+7,Tomato,Roma,lbs
+8,Winter squash,Butternut,lbs
+9,Cabbage,Early Jersey,lbs
+10,Potato,Yukon Gold,lbs
+11,Corn,Silver Queen,bushels
+12,Corn,Peaches and Cream,bushels
+13,Corn,Bodacious,bushels
+14,Corn,Incredible,bushels
+15,Corn,Honey Select,bushels
+16,Corn,Kandy Korn,bushels
+17,Corn,Hickory King,bushels
+18,Corn,Bloody Butcher,bushels
+19,Soybeans,Hutcheson,bushels
+20,Soybeans,Essex,bushels
+21,Soybeans,Jack,bushels
+22,Soybeans,Harosoy,bushels
+23,Soybeans,Clark,bushels
+24,Soybeans,Forrest,bushels
+25,Soybeans,Bragg,bushels
+26,Soybeans,Amsoy,bushels
+27,Winter wheat,Turkey Red,bushels
+28,Winter wheat,Jagger,bushels
+29,Winter wheat,Karl,bushels
+30,Winter wheat,Everest,bushels
+31,Winter wheat,Overley,bushels
+32,Winter wheat,Fuller,bushels
+33,Winter wheat,TAM 111,bushels
+34,Winter wheat,Soft Red,bushels
+35,Oats,Ogle,bushels
+36,Oats,Jerry,bushels
+37,Oats,Rodeo,bushels
+38,Oats,Shelby,bushels
+39,Oats,Saber,bushels
+40,Barley,Conlon,bushels
+41,Barley,Tradition,bushels
+42,Barley,Legacy,bushels
+43,Barley,Robust,bushels
+44,Barley,Morex,bushels
+45,Alfalfa,Ranger,tons
+46,Alfalfa,Buffalo,tons
+47,Alfalfa,Apollo,tons
+48,Alfalfa,Saranac,tons
+49,Timothy,Climax,tons
+50,Timothy,Clair,tons
+51,Tomato,Cherokee Purple,lbs
+52,Tomato,Brandywine,lbs
+53,Tomato,Better Boy,lbs
+54,Tomato,Early Girl,lbs
+55,Tomato,Celebrity,lbs
+56,Tomato,Beefsteak,lbs
+57,Tomato,San Marzano,lbs
+58,Tomato,Amish Paste,lbs
+59,Potato,Russet Burbank,lbs
+60,Potato,Red Norland,lbs
+61,Potato,Kennebec,lbs
+62,Potato,Katahdin,lbs
+63,Potato,Superior,lbs
+64,Potato,Atlantic,lbs
+65,Sweet potato,Covington,lbs
+66,Sweet potato,Georgia Jet,lbs
+67,Sweet potato,Jewel,lbs
+68,Sweet potato,Centennial,lbs
+69,Sweet potato,Vardaman,lbs
+70,Winter squash,Acorn,lbs
+71,Winter squash,Spaghetti,lbs
+72,Winter squash,Delicata,lbs
+73,Winter squash,Hubbard,lbs
+74,Winter squash,Kabocha,lbs
+75,Winter squash,Buttercup,lbs
+76,Cabbage,Savoy,lbs
+77,Cabbage,Danish Ballhead,lbs
+78,Cabbage,Copenhagen Market,lbs
+79,Cabbage,Red Acre,lbs
+80,Cabbage,Napa,lbs
+81,Pepper,California Wonder,lbs
+82,Pepper,Jalapeno,lbs
+83,Pepper,Poblano,lbs
+84,Pepper,Cayenne,lbs
+85,Pepper,Banana,lbs
+86,Pepper,Serrano,lbs
+87,Onion,Yellow Granex,lbs
+88,Onion,Walla Walla,lbs
+89,Onion,Red Burgundy,lbs
+90,Onion,Candy,lbs
+91,Onion,Texas Sweet,lbs
+92,Carrot,Danvers,lbs
+93,Carrot,Nantes,lbs
+94,Carrot,Imperator,lbs
+95,Carrot,Chantenay,lbs
+96,Green bean,Blue Lake,lbs
+97,Green bean,Provider,lbs
+98,Green bean,Contender,lbs
+99,Green bean,Kentucky Wonder,lbs
+100,Green bean,Roma II,lbs

@@ -1,0 +1,101 @@
+customer_id,customer_name,customer_type,street_address,city,state,zip_code,phone,email
+1,Birch Bistro,restaurant,153 Mill Road,Sedalia,MO,65301,660-555-0103,orders1@example.com
+2,Clover Foods,grocer,206 Church Street,Wooster,OH,44691,330-555-0106,orders2@example.com
+3,Dogwood Food Distributors,distributor,259 Highway 20,Brookings,SD,57006,605-555-0109,orders3@example.com
+4,Erin Evans,individual,312 Prairie Avenue,Cedar Rapids,IA,52401,319-555-0112,erin.evans@example.com
+5,Fox Bistro,restaurant,365 River Road,Eau Claire,WI,54701,715-555-0115,orders5@example.com
+6,Golden Market,grocer,418 Orchard Lane,Lafayette,IN,47901,765-555-0118,orders6@example.com
+7,Hickory Food Distributors,distributor,471 Depot Street,Kearney,NE,68847,308-555-0121,orders7@example.com
+8,Isabel Ibrahim,individual,,Viroqua,WI,54665,608-555-0124,isabel.ibrahim@example.com
+9,Juniper Bistro,restaurant,577 Lake Road,Goshen,IN,46526,574-555-0127,orders9@example.com
+10,Laurel Grocers,grocer,630 Fairview Drive,Columbia,MO,65201,573-555-0130,orders10@example.com
+11,Mill Food Distributors,distributor,683 School Road,Topeka,KS,66603,785-555-0133,orders11@example.com
+12,Maria Mitchell,individual,736 County Road 4,Rochester,MN,55901,507-555-0136,maria.mitchell@example.com
+13,Pine Bistro,restaurant,789 Mill Road,Fargo,ND,58102,701-555-0139,orders13@example.com
+14,Quail Foods,grocer,842 Church Street,Salina,KS,67401,785-555-0142,orders14@example.com
+15,Rolling Food Distributors,distributor,895 Highway 20,Mankato,MN,56001,507-555-0145,orders15@example.com
+16,Quinn Reed,individual,,Decatur,IL,62521,217-555-0148,
+17,Birch Bistro,restaurant,1001 River Road,Lincoln,NE,68508,402-555-0151,orders17@example.com
+18,Clover Market,grocer,1054 Orchard Lane,Springfield,IL,62701,217-555-0154,orders18@example.com
+19,Dogwood Food Distributors,distributor,1107 Depot Street,Findlay,OH,45840,419-555-0157,orders19@example.com
+20,Victor Dawson,individual,1160 Township Road 8,Ames,IA,50010,,victor.dawson@example.com
+21,Fox Bistro,restaurant,1213 Lake Road,Sedalia,MO,65301,660-555-0163,orders21@example.com
+22,Golden Grocers,grocer,1266 Fairview Drive,Wooster,OH,44691,330-555-0166,orders22@example.com
+23,Hickory Food Distributors,distributor,1319 School Road,Brookings,SD,57006,605-555-0169,orders23@example.com
+24,Amy Hansen,individual,,Cedar Rapids,IA,52401,319-555-0172,amy.hansen@example.com
+25,Juniper Bistro,restaurant,1425 Mill Road,Eau Claire,WI,54701,715-555-0175,orders25@example.com
+26,Laurel Foods,grocer,1478 Church Street,Lafayette,IN,47901,765-555-0178,orders26@example.com
+27,Mill Food Distributors,distributor,1531 Highway 20,Kearney,NE,68847,308-555-0181,orders27@example.com
+28,Erin Lindqvist,individual,1584 Prairie Avenue,Viroqua,WI,54665,608-555-0184,erin.lindqvist@example.com
+29,Pine Bistro,restaurant,1637 River Road,Goshen,IN,46526,574-555-0187,orders29@example.com
+30,Quail Market,grocer,1690 Orchard Lane,Columbia,MO,65201,573-555-0190,orders30@example.com
+31,Rolling Food Distributors,distributor,1743 Depot Street,Topeka,KS,66603,785-555-0193,orders31@example.com
+32,Isabel Patel,individual,,Rochester,MN,55901,507-555-0196,isabel.patel@example.com
+33,Birch Bistro,restaurant,1849 Lake Road,Fargo,ND,58102,701-555-0199,orders33@example.com
+34,Clover Grocers,grocer,1902 Fairview Drive,Salina,KS,67401,785-555-0102,orders34@example.com
+35,Dogwood Food Distributors,distributor,1955 School Road,Mankato,MN,56001,507-555-0105,orders35@example.com
+36,Maria Castillo,individual,2008 County Road 4,Decatur,IL,62521,217-555-0108,
+37,Fox Bistro,restaurant,2061 Mill Road,Lincoln,NE,68508,402-555-0111,orders37@example.com
+38,Golden Foods,grocer,2114 Church Street,Springfield,IL,62701,217-555-0114,orders38@example.com
+39,Hickory Food Distributors,distributor,2167 Highway 20,Findlay,OH,45840,419-555-0117,orders39@example.com
+40,Quinn Garcia,individual,,Ames,IA,50010,,quinn.garcia@example.com
+41,Juniper Bistro,restaurant,2273 River Road,Sedalia,MO,65301,660-555-0123,orders41@example.com
+42,Laurel Market,grocer,2326 Orchard Lane,Wooster,OH,44691,330-555-0126,orders42@example.com
+43,Mill Food Distributors,distributor,2379 Depot Street,Brookings,SD,57006,605-555-0129,orders43@example.com
+44,Victor Kim,individual,2432 Township Road 8,Cedar Rapids,IA,52401,319-555-0132,victor.kim@example.com
+45,Pine Bistro,restaurant,2485 Lake Road,Eau Claire,WI,54701,715-555-0135,orders45@example.com
+46,Quail Grocers,grocer,2538 Fairview Drive,Lafayette,IN,47901,765-555-0138,orders46@example.com
+47,Rolling Food Distributors,distributor,2591 School Road,Kearney,NE,68847,308-555-0141,orders47@example.com
+48,Amy Olsen,individual,,Viroqua,WI,54665,608-555-0144,amy.olsen@example.com
+49,Birch Bistro,restaurant,2697 Mill Road,Goshen,IN,46526,574-555-0147,orders49@example.com
+50,Clover Foods,grocer,2750 Church Street,Columbia,MO,65201,573-555-0150,orders50@example.com
+51,Dogwood Food Distributors,distributor,2803 Highway 20,Topeka,KS,66603,785-555-0153,orders51@example.com
+52,Erin Baker,individual,2856 Prairie Avenue,Rochester,MN,55901,507-555-0156,erin.baker@example.com
+53,Fox Bistro,restaurant,2909 River Road,Fargo,ND,58102,701-555-0159,orders53@example.com
+54,Golden Market,grocer,2962 Orchard Lane,Salina,KS,67401,785-555-0162,orders54@example.com
+55,Hickory Food Distributors,distributor,3015 Depot Street,Mankato,MN,56001,507-555-0165,orders55@example.com
+56,Isabel Foster,individual,,Decatur,IL,62521,217-555-0168,
+57,Juniper Bistro,restaurant,3121 Lake Road,Lincoln,NE,68508,402-555-0171,orders57@example.com
+58,Laurel Grocers,grocer,3174 Fairview Drive,Springfield,IL,62701,217-555-0174,orders58@example.com
+59,Mill Food Distributors,distributor,3227 School Road,Findlay,OH,45840,419-555-0177,orders59@example.com
+60,Maria Jensen,individual,3280 County Road 4,Ames,IA,50010,,maria.jensen@example.com
+61,Pine Bistro,restaurant,3333 Mill Road,Sedalia,MO,65301,660-555-0183,orders61@example.com
+62,Quail Foods,grocer,3386 Church Street,Wooster,OH,44691,330-555-0186,orders62@example.com
+63,Rolling Food Distributors,distributor,3439 Highway 20,Brookings,SD,57006,605-555-0189,orders63@example.com
+64,Quinn Nguyen,individual,,Cedar Rapids,IA,52401,319-555-0192,quinn.nguyen@example.com
+65,Birch Bistro,restaurant,3545 River Road,Eau Claire,WI,54701,715-555-0195,orders65@example.com
+66,Clover Market,grocer,3598 Orchard Lane,Lafayette,IN,47901,765-555-0198,orders66@example.com
+67,Dogwood Food Distributors,distributor,3651 Depot Street,Kearney,NE,68847,308-555-0101,orders67@example.com
+68,Victor Anderson,individual,3704 Township Road 8,Viroqua,WI,54665,608-555-0104,victor.anderson@example.com
+69,Fox Bistro,restaurant,3757 Lake Road,Goshen,IN,46526,574-555-0107,orders69@example.com
+70,Golden Grocers,grocer,3810 Fairview Drive,Columbia,MO,65201,573-555-0110,orders70@example.com
+71,Hickory Food Distributors,distributor,3863 School Road,Topeka,KS,66603,785-555-0113,orders71@example.com
+72,Amy Evans,individual,,Rochester,MN,55901,507-555-0116,amy.evans@example.com
+73,Juniper Bistro,restaurant,3969 Mill Road,Fargo,ND,58102,701-555-0119,orders73@example.com
+74,Laurel Foods,grocer,4022 Church Street,Salina,KS,67401,785-555-0122,orders74@example.com
+75,Mill Food Distributors,distributor,4075 Highway 20,Mankato,MN,56001,507-555-0125,orders75@example.com
+76,Erin Ibrahim,individual,4128 Prairie Avenue,Decatur,IL,62521,217-555-0128,
+77,Pine Bistro,restaurant,4181 River Road,Lincoln,NE,68508,402-555-0131,orders77@example.com
+78,Quail Market,grocer,4234 Orchard Lane,Springfield,IL,62701,217-555-0134,orders78@example.com
+79,Rolling Food Distributors,distributor,4287 Depot Street,Findlay,OH,45840,419-555-0137,orders79@example.com
+80,Isabel Mitchell,individual,,Ames,IA,50010,,isabel.mitchell@example.com
+81,Birch Bistro,restaurant,4393 Lake Road,Sedalia,MO,65301,660-555-0143,orders81@example.com
+82,Clover Grocers,grocer,4446 Fairview Drive,Wooster,OH,44691,330-555-0146,orders82@example.com
+83,Dogwood Food Distributors,distributor,4499 School Road,Brookings,SD,57006,605-555-0149,orders83@example.com
+84,Maria Reed,individual,4552 County Road 4,Cedar Rapids,IA,52401,319-555-0152,maria.reed@example.com
+85,Fox Bistro,restaurant,4605 Mill Road,Eau Claire,WI,54701,715-555-0155,orders85@example.com
+86,Golden Foods,grocer,4658 Church Street,Lafayette,IN,47901,765-555-0158,orders86@example.com
+87,Hickory Food Distributors,distributor,4711 Highway 20,Kearney,NE,68847,308-555-0161,orders87@example.com
+88,Quinn Dawson,individual,,Viroqua,WI,54665,608-555-0164,quinn.dawson@example.com
+89,Juniper Bistro,restaurant,4817 River Road,Goshen,IN,46526,574-555-0167,orders89@example.com
+90,Laurel Market,grocer,4870 Orchard Lane,Columbia,MO,65201,573-555-0170,orders90@example.com
+91,Mill Food Distributors,distributor,4923 Depot Street,Topeka,KS,66603,785-555-0173,orders91@example.com
+92,Victor Hansen,individual,4976 Township Road 8,Rochester,MN,55901,507-555-0176,victor.hansen@example.com
+93,Pine Bistro,restaurant,5029 Lake Road,Fargo,ND,58102,701-555-0179,orders93@example.com
+94,Quail Grocers,grocer,5082 Fairview Drive,Salina,KS,67401,785-555-0182,orders94@example.com
+95,Rolling Food Distributors,distributor,5135 School Road,Mankato,MN,56001,507-555-0185,orders95@example.com
+96,Amy Lindqvist,individual,,Decatur,IL,62521,217-555-0188,
+97,Birch Bistro,restaurant,5241 Mill Road,Lincoln,NE,68508,402-555-0191,orders97@example.com
+98,Clover Foods,grocer,5294 Church Street,Springfield,IL,62701,217-555-0194,orders98@example.com
+99,Dogwood Food Distributors,distributor,5347 Highway 20,Findlay,OH,45840,419-555-0197,orders99@example.com
+100,Erin Patel,individual,5400 Prairie Avenue,Ames,IA,50010,,erin.patel@example.com

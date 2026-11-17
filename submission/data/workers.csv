@@ -1,0 +1,101 @@
+worker_id,first_name,last_name,job_title,hire_date,hourly_wage,employment_type,phone,email,farm_id
+1,Frank,Dawson,livestock handler,2026-04-02,19.50,seasonal,308-555-0109,frank.dawson1@example.com,1
+2,Karen,Garcia,field hand,2005-08-15,17.00,part time,785-555-0118,karen.garcia2@example.com,1
+3,Paul,Jensen,equipment operator,2005-12-06,23.50,full time,660-555-0127,paul.jensen3@example.com,1
+4,Victor,Mitchell,field hand,2006-03-29,18.00,full time,608-555-0136,victor.mitchell4@example.com,1
+5,Brian,Patel,livestock handler,2026-04-06,21.50,seasonal,507-555-0145,brian.patel5@example.com,1
+6,Grace,Baker,mechanic,2006-11-10,28.00,part time,330-555-0154,grace.baker6@example.com,1
+7,Liam,Evans,manager,2007-03-03,31.50,full time,574-555-0163,liam.evans7@example.com,1
+8,Quinn,Hansen,field hand,2007-06-24,16.00,full time,217-555-0172,quinn.hansen8@example.com,2
+9,Wendy,Kim,livestock handler,2026-04-10,19.50,seasonal,605-555-0181,wendy.kim9@example.com,2
+10,Carmen,Nguyen,field hand,2008-02-05,17.00,part time,573-555-0190,carmen.nguyen10@example.com,2
+11,Henry,Reed,equipment operator,2008-05-28,23.50,full time,402-555-0199,henry.reed11@example.com,2
+12,Maria,Castillo,field hand,2008-09-18,18.00,full time,319-555-0108,maria.castillo12@example.com,2
+13,Rachel,Foster,livestock handler,2026-04-14,21.50,seasonal,785-555-0117,rachel.foster13@example.com,2
+14,Xavier,Ibrahim,mechanic,2009-05-02,28.00,part time,217-555-0126,xavier.ibrahim14@example.com,2
+15,David,Lindqvist,manager,2009-08-23,31.50,full time,715-555-0135,david.lindqvist15@example.com,2
+16,Isabel,Olsen,field hand,2009-12-14,16.00,full time,507-555-0144,isabel.olsen16@example.com,3
+17,Nathan,Anderson,livestock handler,2026-04-18,19.50,seasonal,419-555-0153,nathan.anderson17@example.com,3
+18,Steven,Dawson,field hand,2010-07-28,17.00,part time,765-555-0162,steven.dawson18@example.com,3
+19,Yuki,Garcia,equipment operator,2010-11-18,23.50,full time,701-555-0171,yuki.garcia19@example.com,3
+20,Erin,Jensen,field hand,2011-03-11,18.00,full time,515-555-0180,erin.jensen20@example.com,3
+21,Jamal,Mitchell,livestock handler,2026-04-22,21.50,seasonal,308-555-0189,jamal.mitchell21@example.com,3
+22,Olivia,Patel,mechanic,2011-10-23,28.00,part time,785-555-0198,olivia.patel22@example.com,3
+23,Tara,Baker,manager,2012-02-13,31.50,full time,660-555-0107,tara.baker23@example.com,3
+24,Amy,Evans,field hand,2012-06-05,16.00,full time,608-555-0116,amy.evans24@example.com,4
+25,Frank,Hansen,livestock handler,2026-04-26,19.50,seasonal,507-555-0125,frank.hansen25@example.com,4
+26,Karen,Kim,field hand,2013-01-17,17.00,part time,330-555-0134,karen.kim26@example.com,4
+27,Paul,Nguyen,equipment operator,2013-05-10,23.50,full time,574-555-0143,paul.nguyen27@example.com,4
+28,Victor,Reed,field hand,2013-08-31,18.00,full time,217-555-0152,victor.reed28@example.com,4
+29,Brian,Castillo,livestock handler,2026-04-30,21.50,seasonal,605-555-0161,brian.castillo29@example.com,4
+30,Grace,Foster,mechanic,2014-04-14,28.00,part time,573-555-0170,grace.foster30@example.com,4
+31,Liam,Ibrahim,manager,2014-08-05,31.50,full time,402-555-0179,liam.ibrahim31@example.com,4
+32,Quinn,Lindqvist,field hand,2014-11-26,16.00,full time,319-555-0188,quinn.lindqvist32@example.com,5
+33,Wendy,Olsen,livestock handler,2026-05-04,19.50,seasonal,785-555-0197,wendy.olsen33@example.com,5
+34,Carmen,Anderson,field hand,2015-07-10,17.00,part time,217-555-0106,carmen.anderson34@example.com,5
+35,Henry,Dawson,equipment operator,2015-10-31,23.50,full time,715-555-0115,henry.dawson35@example.com,5
+36,Maria,Garcia,field hand,2016-02-21,18.00,full time,507-555-0124,maria.garcia36@example.com,5
+37,Rachel,Jensen,livestock handler,2026-05-08,21.50,seasonal,419-555-0133,rachel.jensen37@example.com,5
+38,Xavier,Mitchell,mechanic,2016-10-04,28.00,part time,765-555-0142,xavier.mitchell38@example.com,5
+39,David,Patel,manager,2017-01-25,31.50,full time,701-555-0151,david.patel39@example.com,5
+40,Isabel,Baker,field hand,2017-05-18,16.00,full time,515-555-0160,isabel.baker40@example.com,6
+41,Nathan,Evans,livestock handler,2026-05-12,19.50,seasonal,308-555-0169,nathan.evans41@example.com,6
+42,Steven,Hansen,field hand,2017-12-30,17.00,part time,785-555-0178,steven.hansen42@example.com,6
+43,Yuki,Kim,equipment operator,2018-04-22,23.50,full time,660-555-0187,yuki.kim43@example.com,6
+44,Erin,Nguyen,field hand,2018-08-13,18.00,full time,608-555-0196,erin.nguyen44@example.com,6
+45,Jamal,Reed,livestock handler,2026-05-16,21.50,seasonal,507-555-0105,jamal.reed45@example.com,6
+46,Olivia,Castillo,mechanic,2019-03-27,28.00,part time,330-555-0114,olivia.castillo46@example.com,6
+47,Tara,Foster,manager,2019-07-18,31.50,full time,574-555-0123,tara.foster47@example.com,6
+48,Amy,Ibrahim,field hand,2019-11-08,16.00,full time,217-555-0132,amy.ibrahim48@example.com,7
+49,Frank,Lindqvist,livestock handler,2026-05-20,19.50,seasonal,605-555-0141,frank.lindqvist49@example.com,7
+50,Karen,Olsen,field hand,2020-06-21,17.00,part time,573-555-0150,karen.olsen50@example.com,7
+51,Paul,Anderson,equipment operator,2020-10-12,23.50,full time,402-555-0159,paul.anderson51@example.com,7
+52,Victor,Dawson,field hand,2021-02-02,18.00,full time,319-555-0168,victor.dawson52@example.com,7
+53,Brian,Garcia,livestock handler,2026-05-24,21.50,seasonal,785-555-0177,brian.garcia53@example.com,7
+54,Grace,Jensen,mechanic,2021-09-16,28.00,part time,217-555-0186,grace.jensen54@example.com,7
+55,Liam,Mitchell,manager,2022-01-07,31.50,full time,715-555-0195,liam.mitchell55@example.com,7
+56,Quinn,Patel,field hand,2022-04-30,16.00,full time,507-555-0104,quinn.patel56@example.com,8
+57,Wendy,Baker,livestock handler,2026-05-28,19.50,seasonal,419-555-0113,wendy.baker57@example.com,8
+58,Carmen,Evans,field hand,2022-12-12,17.00,part time,765-555-0122,carmen.evans58@example.com,8
+59,Henry,Hansen,equipment operator,2023-04-04,23.50,full time,701-555-0131,henry.hansen59@example.com,8
+60,Maria,Kim,field hand,2023-07-26,18.00,full time,515-555-0140,maria.kim60@example.com,8
+61,Rachel,Nguyen,livestock handler,2026-04-02,21.50,seasonal,308-555-0149,rachel.nguyen61@example.com,8
+62,Xavier,Reed,mechanic,2024-03-08,28.00,part time,785-555-0158,xavier.reed62@example.com,8
+63,David,Castillo,manager,2024-06-29,31.50,full time,660-555-0167,david.castillo63@example.com,8
+64,Isabel,Foster,field hand,2024-10-20,16.00,full time,608-555-0176,isabel.foster64@example.com,1
+65,Nathan,Ibrahim,livestock handler,2026-04-06,19.50,seasonal,507-555-0185,nathan.ibrahim65@example.com,1
+66,Steven,Lindqvist,field hand,2025-06-03,17.00,part time,330-555-0194,steven.lindqvist66@example.com,1
+67,Yuki,Olsen,equipment operator,2025-09-24,23.50,full time,574-555-0103,yuki.olsen67@example.com,1
+68,Erin,Anderson,field hand,2026-01-15,18.00,full time,217-555-0112,erin.anderson68@example.com,1
+69,Jamal,Dawson,livestock handler,2026-04-10,21.50,seasonal,605-555-0121,jamal.dawson69@example.com,1
+70,Olivia,Garcia,mechanic,2005-07-30,28.00,part time,573-555-0130,olivia.garcia70@example.com,1
+71,Tara,Jensen,manager,2005-11-20,31.50,full time,402-555-0139,tara.jensen71@example.com,1
+72,Amy,Mitchell,field hand,2006-03-13,16.00,full time,319-555-0148,amy.mitchell72@example.com,2
+73,Frank,Patel,livestock handler,2026-04-14,19.50,seasonal,785-555-0157,frank.patel73@example.com,2
+74,Karen,Baker,field hand,2006-10-25,17.00,part time,217-555-0166,karen.baker74@example.com,2
+75,Paul,Evans,equipment operator,2007-02-15,23.50,full time,715-555-0175,paul.evans75@example.com,2
+76,Victor,Hansen,field hand,2007-06-08,18.00,full time,507-555-0184,victor.hansen76@example.com,2
+77,Brian,Kim,livestock handler,2026-04-18,21.50,seasonal,419-555-0193,brian.kim77@example.com,2
+78,Grace,Nguyen,mechanic,2008-01-20,28.00,part time,765-555-0102,grace.nguyen78@example.com,2
+79,Liam,Reed,manager,2008-05-12,31.50,full time,701-555-0111,liam.reed79@example.com,2
+80,Quinn,Castillo,field hand,2008-09-02,16.00,full time,515-555-0120,quinn.castillo80@example.com,3
+81,Wendy,Foster,livestock handler,2026-04-22,19.50,seasonal,308-555-0129,wendy.foster81@example.com,3
+82,Carmen,Ibrahim,field hand,2009-04-16,17.00,part time,785-555-0138,carmen.ibrahim82@example.com,3
+83,Henry,Lindqvist,equipment operator,2009-08-07,23.50,full time,660-555-0147,henry.lindqvist83@example.com,3
+84,Maria,Olsen,field hand,2009-11-28,18.00,full time,608-555-0156,maria.olsen84@example.com,3
+85,Rachel,Anderson,livestock handler,2026-04-26,21.50,seasonal,507-555-0165,rachel.anderson85@example.com,3
+86,Xavier,Dawson,mechanic,2010-07-12,28.00,part time,330-555-0174,xavier.dawson86@example.com,3
+87,David,Garcia,manager,2010-11-02,31.50,full time,574-555-0183,david.garcia87@example.com,3
+88,Isabel,Jensen,field hand,2011-02-23,16.00,full time,217-555-0192,isabel.jensen88@example.com,4
+89,Nathan,Mitchell,livestock handler,2026-04-30,19.50,seasonal,605-555-0101,nathan.mitchell89@example.com,4
+90,Steven,Patel,field hand,2011-10-07,17.00,part time,573-555-0110,steven.patel90@example.com,4
+91,Yuki,Baker,equipment operator,2012-01-28,23.50,full time,402-555-0119,yuki.baker91@example.com,4
+92,Erin,Evans,field hand,2012-05-20,18.00,full time,319-555-0128,erin.evans92@example.com,4
+93,Jamal,Hansen,livestock handler,2026-05-04,21.50,seasonal,785-555-0137,jamal.hansen93@example.com,4
+94,Olivia,Kim,mechanic,2013-01-01,28.00,part time,217-555-0146,olivia.kim94@example.com,4
+95,Tara,Nguyen,manager,2013-04-24,31.50,full time,715-555-0155,tara.nguyen95@example.com,4
+96,Amy,Reed,field hand,2013-08-15,16.00,full time,507-555-0164,amy.reed96@example.com,5
+97,Frank,Castillo,livestock handler,2026-05-08,19.50,seasonal,419-555-0173,frank.castillo97@example.com,5
+98,Karen,Foster,field hand,2014-03-29,17.00,part time,765-555-0182,karen.foster98@example.com,5
+99,Paul,Ibrahim,equipment operator,2014-07-20,23.50,full time,701-555-0191,paul.ibrahim99@example.com,5
+100,Victor,Lindqvist,field hand,2014-11-10,18.00,full time,515-555-0100,victor.lindqvist100@example.com,5

@@ -1,0 +1,101 @@
+vendor_id,vendor_name,street_address,city,state,zip_code,phone,email
+1,Birch Seed Co.,261 Mill Road,Goshen,IN,46526,574-555-0107,office1@example.com
+2,Clover Electric Co-op,322 Church Street,Springfield,IL,62701,217-555-0114,office2@example.com
+3,Dogwood Ag Repair,383 Highway 20,Kearney,NE,68847,308-555-0121,office3@example.com
+4,Elm Farm Supply,444 Prairie Avenue,Decatur,IL,62521,217-555-0128,office4@example.com
+5,Fox Feed and Grain,505 River Road,Eau Claire,WI,54701,715-555-0135,office5@example.com
+6,Golden Seed Co.,566 Orchard Lane,Salina,KS,67401,785-555-0142,office6@example.com
+7,Hickory Electric Co-op,627 Depot Street,Brookings,SD,57006,605-555-0149,office7@example.com
+8,Ivy Ag Repair,688 Township Road 8,Rochester,MN,55901,507-555-0156,office8@example.com
+9,Juniper Farm Supply,749 Lake Road,Sedalia,MO,65301,660-555-0163,office9@example.com
+10,Laurel Feed and Grain,810 Fairview Drive,Columbia,MO,65201,573-555-0170,office10@example.com
+11,Mill Seed Co.,871 School Road,Findlay,OH,45840,419-555-0177,office11@example.com
+12,North Electric Co-op,932 County Road 4,Viroqua,WI,54665,608-555-0184,office12@example.com
+13,Pine Ag Repair,993 Mill Road,Lincoln,NE,68508,402-555-0191,office13@example.com
+14,Quail Farm Supply,1054 Church Street,Lafayette,IN,47901,765-555-0198,office14@example.com
+15,Rolling Feed and Grain,1115 Highway 20,Mankato,MN,56001,507-555-0105,office15@example.com
+16,Aspen Seed Co.,1176 Prairie Avenue,Cedar Rapids,IA,52401,319-555-0112,office16@example.com
+17,Birch Electric Co-op,1237 River Road,Fargo,ND,58102,701-555-0119,office17@example.com
+18,Clover Ag Repair,1298 Orchard Lane,Wooster,OH,44691,330-555-0126,office18@example.com
+19,Dogwood Farm Supply,1359 Depot Street,Topeka,KS,66603,785-555-0133,office19@example.com
+20,Elm Feed and Grain,1420 Township Road 8,Ames,IA,50010,515-555-0140,office20@example.com
+21,Fox Seed Co.,1481 Lake Road,Goshen,IN,46526,574-555-0147,office21@example.com
+22,Golden Electric Co-op,1542 Fairview Drive,Springfield,IL,62701,217-555-0154,office22@example.com
+23,Hickory Ag Repair,1603 School Road,Kearney,NE,68847,308-555-0161,office23@example.com
+24,Ivy Farm Supply,1664 County Road 4,Decatur,IL,62521,217-555-0168,office24@example.com
+25,Juniper Feed and Grain,1725 Mill Road,Eau Claire,WI,54701,715-555-0175,office25@example.com
+26,Laurel Seed Co.,1786 Church Street,Salina,KS,67401,785-555-0182,office26@example.com
+27,Mill Electric Co-op,1847 Highway 20,Brookings,SD,57006,605-555-0189,office27@example.com
+28,North Ag Repair,1908 Prairie Avenue,Rochester,MN,55901,507-555-0196,office28@example.com
+29,Pine Farm Supply,1969 River Road,Sedalia,MO,65301,660-555-0103,office29@example.com
+30,Quail Feed and Grain,2030 Orchard Lane,Columbia,MO,65201,573-555-0110,office30@example.com
+31,Rolling Seed Co.,2091 Depot Street,Findlay,OH,45840,419-555-0117,office31@example.com
+32,Aspen Electric Co-op,2152 Township Road 8,Viroqua,WI,54665,608-555-0124,office32@example.com
+33,Birch Ag Repair,2213 Lake Road,Lincoln,NE,68508,402-555-0131,office33@example.com
+34,Clover Farm Supply,2274 Fairview Drive,Lafayette,IN,47901,765-555-0138,office34@example.com
+35,Dogwood Feed and Grain,2335 School Road,Mankato,MN,56001,507-555-0145,office35@example.com
+36,Elm Seed Co.,2396 County Road 4,Cedar Rapids,IA,52401,319-555-0152,office36@example.com
+37,Fox Electric Co-op,2457 Mill Road,Fargo,ND,58102,701-555-0159,office37@example.com
+38,Golden Ag Repair,2518 Church Street,Wooster,OH,44691,330-555-0166,office38@example.com
+39,Hickory Farm Supply,2579 Highway 20,Topeka,KS,66603,785-555-0173,office39@example.com
+40,Ivy Feed and Grain,2640 Prairie Avenue,Ames,IA,50010,515-555-0180,office40@example.com
+41,Juniper Seed Co.,2701 River Road,Goshen,IN,46526,574-555-0187,office41@example.com
+42,Laurel Electric Co-op,2762 Orchard Lane,Springfield,IL,62701,217-555-0194,office42@example.com
+43,Mill Ag Repair,2823 Depot Street,Kearney,NE,68847,308-555-0101,office43@example.com
+44,North Farm Supply,2884 Township Road 8,Decatur,IL,62521,217-555-0108,office44@example.com
+45,Pine Feed and Grain,2945 Lake Road,Eau Claire,WI,54701,715-555-0115,office45@example.com
+46,Quail Seed Co.,3006 Fairview Drive,Salina,KS,67401,785-555-0122,office46@example.com
+47,Rolling Electric Co-op,3067 School Road,Brookings,SD,57006,605-555-0129,office47@example.com
+48,Aspen Ag Repair,3128 County Road 4,Rochester,MN,55901,507-555-0136,office48@example.com
+49,Birch Farm Supply,3189 Mill Road,Sedalia,MO,65301,660-555-0143,office49@example.com
+50,Clover Feed and Grain,3250 Church Street,Columbia,MO,65201,573-555-0150,office50@example.com
+51,Dogwood Seed Co.,3311 Highway 20,Findlay,OH,45840,419-555-0157,office51@example.com
+52,Elm Electric Co-op,3372 Prairie Avenue,Viroqua,WI,54665,608-555-0164,office52@example.com
+53,Fox Ag Repair,3433 River Road,Lincoln,NE,68508,402-555-0171,office53@example.com
+54,Golden Farm Supply,3494 Orchard Lane,Lafayette,IN,47901,765-555-0178,office54@example.com
+55,Hickory Feed and Grain,3555 Depot Street,Mankato,MN,56001,507-555-0185,office55@example.com
+56,Ivy Seed Co.,3616 Township Road 8,Cedar Rapids,IA,52401,319-555-0192,office56@example.com
+57,Juniper Electric Co-op,3677 Lake Road,Fargo,ND,58102,701-555-0199,office57@example.com
+58,Laurel Ag Repair,3738 Fairview Drive,Wooster,OH,44691,330-555-0106,office58@example.com
+59,Mill Farm Supply,3799 School Road,Topeka,KS,66603,785-555-0113,office59@example.com
+60,North Feed and Grain,3860 County Road 4,Ames,IA,50010,515-555-0120,office60@example.com
+61,Pine Seed Co.,3921 Mill Road,Goshen,IN,46526,574-555-0127,office61@example.com
+62,Quail Electric Co-op,3982 Church Street,Springfield,IL,62701,217-555-0134,office62@example.com
+63,Rolling Ag Repair,4043 Highway 20,Kearney,NE,68847,308-555-0141,office63@example.com
+64,Aspen Farm Supply,4104 Prairie Avenue,Decatur,IL,62521,217-555-0148,office64@example.com
+65,Birch Feed and Grain,4165 River Road,Eau Claire,WI,54701,715-555-0155,office65@example.com
+66,Clover Seed Co.,4226 Orchard Lane,Salina,KS,67401,785-555-0162,office66@example.com
+67,Dogwood Electric Co-op,4287 Depot Street,Brookings,SD,57006,605-555-0169,office67@example.com
+68,Elm Ag Repair,4348 Township Road 8,Rochester,MN,55901,507-555-0176,office68@example.com
+69,Fox Farm Supply,4409 Lake Road,Sedalia,MO,65301,660-555-0183,office69@example.com
+70,Golden Feed and Grain,4470 Fairview Drive,Columbia,MO,65201,573-555-0190,office70@example.com
+71,Hickory Seed Co.,4531 School Road,Findlay,OH,45840,419-555-0197,office71@example.com
+72,Ivy Electric Co-op,4592 County Road 4,Viroqua,WI,54665,608-555-0104,office72@example.com
+73,Juniper Ag Repair,4653 Mill Road,Lincoln,NE,68508,402-555-0111,office73@example.com
+74,Laurel Farm Supply,4714 Church Street,Lafayette,IN,47901,765-555-0118,office74@example.com
+75,Mill Feed and Grain,4775 Highway 20,Mankato,MN,56001,507-555-0125,office75@example.com
+76,North Seed Co.,4836 Prairie Avenue,Cedar Rapids,IA,52401,319-555-0132,office76@example.com
+77,Pine Electric Co-op,4897 River Road,Fargo,ND,58102,701-555-0139,office77@example.com
+78,Quail Ag Repair,4958 Orchard Lane,Wooster,OH,44691,330-555-0146,office78@example.com
+79,Rolling Farm Supply,5019 Depot Street,Topeka,KS,66603,785-555-0153,office79@example.com
+80,Aspen Feed and Grain,5080 Township Road 8,Ames,IA,50010,515-555-0160,office80@example.com
+81,Birch Seed Co.,5141 Lake Road,Goshen,IN,46526,574-555-0167,office81@example.com
+82,Clover Electric Co-op,5202 Fairview Drive,Springfield,IL,62701,217-555-0174,office82@example.com
+83,Dogwood Ag Repair,5263 School Road,Kearney,NE,68847,308-555-0181,office83@example.com
+84,Elm Farm Supply,5324 County Road 4,Decatur,IL,62521,217-555-0188,office84@example.com
+85,Fox Feed and Grain,5385 Mill Road,Eau Claire,WI,54701,715-555-0195,office85@example.com
+86,Golden Seed Co.,5446 Church Street,Salina,KS,67401,785-555-0102,office86@example.com
+87,Hickory Electric Co-op,5507 Highway 20,Brookings,SD,57006,605-555-0109,office87@example.com
+88,Ivy Ag Repair,5568 Prairie Avenue,Rochester,MN,55901,507-555-0116,office88@example.com
+89,Juniper Farm Supply,5629 River Road,Sedalia,MO,65301,660-555-0123,office89@example.com
+90,Laurel Feed and Grain,5690 Orchard Lane,Columbia,MO,65201,573-555-0130,office90@example.com
+91,Mill Seed Co.,5751 Depot Street,Findlay,OH,45840,419-555-0137,office91@example.com
+92,North Electric Co-op,5812 Township Road 8,Viroqua,WI,54665,608-555-0144,office92@example.com
+93,Pine Ag Repair,5873 Lake Road,Lincoln,NE,68508,402-555-0151,office93@example.com
+94,Quail Farm Supply,5934 Fairview Drive,Lafayette,IN,47901,765-555-0158,office94@example.com
+95,Rolling Feed and Grain,5995 School Road,Mankato,MN,56001,507-555-0165,office95@example.com
+96,Aspen Seed Co.,6056 County Road 4,Cedar Rapids,IA,52401,319-555-0172,office96@example.com
+97,Birch Electric Co-op,6117 Mill Road,Fargo,ND,58102,701-555-0179,office97@example.com
+98,Clover Ag Repair,6178 Church Street,Wooster,OH,44691,330-555-0186,office98@example.com
+99,Dogwood Farm Supply,6239 Highway 20,Topeka,KS,66603,785-555-0193,office99@example.com
+100,Elm Feed and Grain,6300 Prairie Avenue,Ames,IA,50010,515-555-0100,office100@example.com

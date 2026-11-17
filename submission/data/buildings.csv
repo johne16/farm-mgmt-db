@@ -1,0 +1,101 @@
+building_id,building_name,building_type,square_feet,capacity,capacity_unit,year_built,condition_status,farm_id
+1,South silo,silo,811,10211,bushels,2001,good,2
+2,East greenhouse,greenhouse,2058,22,tons,1978,good,3
+3,West storage shed,storage shed,3141,7,machines,2019,poor,4
+4,Upper coop,coop,1276,202,animals,1996,fair,5
+5,Lower barn,barn,6415,75,animals,1973,good,6
+6,North silo,silo,866,11266,bushels,2014,good,7
+7,South greenhouse,greenhouse,2203,27,tons,1991,good,8
+8,East storage shed,storage shed,3376,4,machines,1968,poor,1
+9,West coop,coop,1371,267,animals,2009,fair,2
+10,Upper barn,barn,6830,110,animals,1986,good,3
+11,Lower silo,silo,921,12321,bushels,1963,good,4
+12,North greenhouse,greenhouse,2348,32,tons,2004,good,5
+13,South storage shed,storage shed,3611,9,machines,1981,poor,6
+14,East coop,coop,1466,332,animals,2022,fair,7
+15,West barn,barn,7245,145,animals,1999,good,8
+16,Upper silo,silo,976,13376,bushels,1976,good,1
+17,,greenhouse,2493,37,tons,2017,good,2
+18,North storage shed,storage shed,3846,6,machines,1994,poor,3
+19,South coop,coop,1561,397,animals,1971,fair,4
+20,East barn,barn,7660,50,animals,2012,good,5
+21,West silo,silo,1031,14431,bushels,1989,good,6
+22,Upper greenhouse,greenhouse,2638,42,tons,1966,good,7
+23,Lower storage shed,storage shed,4081,11,machines,2007,poor,8
+24,North coop,coop,1656,462,animals,1984,fair,1
+25,South barn,barn,8075,85,animals,1961,good,2
+26,East silo,silo,1086,15486,bushels,2002,good,3
+27,West greenhouse,greenhouse,2783,47,tons,1979,good,4
+28,Upper storage shed,storage shed,4316,8,machines,2020,poor,5
+29,Lower coop,coop,1751,527,animals,1997,fair,6
+30,North barn,barn,8490,120,animals,1974,good,7
+31,South silo,silo,1141,16541,bushels,2015,good,8
+32,East greenhouse,greenhouse,2928,52,tons,1992,good,1
+33,West storage shed,storage shed,4551,5,machines,1969,poor,2
+34,,coop,1846,592,animals,2010,fair,3
+35,Lower barn,barn,8905,155,animals,1987,good,4
+36,North silo,silo,1196,17596,bushels,1964,good,5
+37,South greenhouse,greenhouse,3073,57,tons,2005,good,6
+38,East storage shed,storage shed,4786,10,machines,1982,poor,7
+39,West coop,coop,1941,157,animals,2023,fair,8
+40,Upper barn,barn,9320,60,animals,2000,good,1
+41,Lower silo,silo,1251,18651,bushels,1977,good,2
+42,North greenhouse,greenhouse,3218,22,tons,2018,good,3
+43,South storage shed,storage shed,5021,7,machines,1995,poor,4
+44,East coop,coop,2036,222,animals,1972,fair,5
+45,West barn,barn,9735,95,animals,2013,good,6
+46,Upper silo,silo,1306,19706,bushels,1990,good,7
+47,Lower greenhouse,greenhouse,3363,27,tons,1967,good,8
+48,North storage shed,storage shed,5256,4,machines,2008,poor,1
+49,South coop,coop,2131,287,animals,1985,fair,2
+50,East barn,barn,10150,130,animals,1962,good,3
+51,,silo,1361,20761,bushels,2003,good,4
+52,Upper greenhouse,greenhouse,3508,32,tons,1980,good,5
+53,Lower storage shed,storage shed,5491,9,machines,2021,poor,6
+54,North coop,coop,2226,352,animals,1998,fair,7
+55,South barn,barn,10565,165,animals,1975,good,8
+56,East silo,silo,1416,21816,bushels,2016,good,1
+57,West greenhouse,greenhouse,3653,37,tons,1993,good,2
+58,Upper storage shed,storage shed,5726,6,machines,1970,poor,3
+59,Lower coop,coop,2321,417,animals,2011,fair,4
+60,North barn,barn,10980,70,animals,1988,good,5
+61,South silo,silo,1471,22871,bushels,1965,good,6
+62,East greenhouse,greenhouse,3798,42,tons,2006,good,7
+63,West storage shed,storage shed,5961,11,machines,1983,poor,8
+64,Upper coop,coop,2416,482,animals,1960,fair,1
+65,Lower barn,barn,11395,105,animals,2001,good,2
+66,North silo,silo,826,23926,bushels,1978,good,3
+67,South greenhouse,greenhouse,3943,47,tons,2019,good,4
+68,,storage shed,6196,8,machines,1996,poor,5
+69,West coop,coop,2511,547,animals,1973,fair,6
+70,Upper barn,barn,11810,140,animals,2014,good,7
+71,Lower silo,silo,881,24981,bushels,1991,good,8
+72,North greenhouse,greenhouse,4088,52,tons,1968,good,1
+73,South storage shed,storage shed,6431,5,machines,2009,poor,2
+74,East coop,coop,2606,612,animals,1986,fair,3
+75,West barn,barn,12225,45,animals,1963,good,4
+76,Upper silo,silo,936,26036,bushels,2004,good,5
+77,Lower greenhouse,greenhouse,4233,57,tons,1981,good,6
+78,North storage shed,storage shed,6666,10,machines,2022,poor,7
+79,South coop,coop,2701,177,animals,1999,fair,8
+80,East barn,barn,12640,80,animals,1976,good,1
+81,West silo,silo,991,27091,bushels,2017,good,2
+82,Upper greenhouse,greenhouse,4378,22,tons,1994,good,3
+83,Lower storage shed,storage shed,6901,7,machines,1971,poor,4
+84,North coop,coop,2796,242,animals,2012,fair,5
+85,,barn,13055,115,animals,1989,good,6
+86,East silo,silo,1046,28146,bushels,1966,good,7
+87,West greenhouse,greenhouse,4523,27,tons,2007,good,8
+88,Upper storage shed,storage shed,3136,4,machines,1984,poor,1
+89,Lower coop,coop,2891,307,animals,1961,fair,2
+90,North barn,barn,13470,150,animals,2002,good,3
+91,South silo,silo,1101,29201,bushels,1979,good,4
+92,East greenhouse,greenhouse,4668,32,tons,2020,good,5
+93,West storage shed,storage shed,3371,9,machines,1997,poor,6
+94,Upper coop,coop,2986,372,animals,1974,fair,7
+95,Lower barn,barn,13885,55,animals,2015,good,8
+96,North silo,silo,1156,10256,bushels,1992,good,1
+97,South greenhouse,greenhouse,4813,37,tons,1969,good,2
+98,East storage shed,storage shed,3606,6,machines,2010,poor,3
+99,West coop,coop,1281,437,animals,1987,fair,4
+100,Upper barn,barn,14300,90,animals,1964,good,5

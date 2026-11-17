@@ -1,0 +1,101 @@
+equipment_id,equipment_name,equipment_type,manufacturer,model,serial_number,purchase_date,purchase_price,condition_status,last_service_date,farm_id,building_id
+1,North field harvester,harvester,Case IH,Axial-Flow 6150,CAS-00911,2008-11-07,323000.00,operational,2026-10-02,1,8
+2,South field irrigation,irrigation,Valley,8120 Pivot,VAL-01822,2009-09-14,92000.00,operational,2026-09-03,1,
+3,East field trailer,trailer,Timpte,Super Hopper,TIM-02733,2010-07-22,65100.00,operational,2026-08-05,1,8
+4,West field tractor,tractor,Massey Ferguson,4710,MAS-03644,2011-05-29,60500.00,operational,2026-07-07,1,8
+5,Backup harvester,harvester,Claas,Lexion 6700,CLA-04555,2012-04-04,432000.00,operational,2026-06-08,1,8
+6,Main irrigation,irrigation,Reinke,Electrogator,REI-05466,2013-02-09,79800.00,operational,2026-05-10,1,
+7,North field trailer,trailer,Big Tex,70TV,BIG-06377,2013-12-17,7800.00,in repair,2026-04-11,1,8
+8,South field tractor,tractor,New Holland,T4.120,NEW-07288,2014-10-24,71400.00,operational,2026-03-13,1,8
+9,East field harvester,harvester,John Deere,S660,JOH-08199,2015-08-31,434500.00,operational,2026-02-12,1,8
+10,West field irrigation,irrigation,Zimmatic,9500P,ZIM-09110,2016-07-07,79200.00,operational,2026-01-14,1,
+11,Backup trailer,trailer,Neville,3000 Series,NEV-10021,2017-05-14,36100.00,retired,2017-11-30,2,33
+12,Main tractor,tractor,Kubota,M5-111,KUB-10932,2018-03-21,61000.00,operational,2026-09-13,2,33
+13,North field harvester,harvester,New Holland,CR8.90,NEW-11843,2019-01-26,472500.00,operational,,2,33
+14,South field irrigation,irrigation,T-L Irrigation,Hydro Pivot,T-L-12754,2019-12-03,89100.00,in repair,2026-07-17,2,
+15,East field trailer,trailer,Wilson,Pacesetter,WIL-13665,2020-10-09,50400.00,operational,2026-06-18,2,33
+16,West field tractor,tractor,John Deere,5075E,JOH-14576,2021-08-16,68400.00,operational,2026-05-20,2,33
+17,Backup harvester,harvester,Case IH,Axial-Flow 6150,CAS-15487,2022-06-23,340000.00,operational,2026-04-21,2,33
+18,Main irrigation,irrigation,Valley,8120 Pivot,VAL-16398,2023-04-30,96600.00,operational,2026-03-23,2,
+19,North field trailer,trailer,Timpte,Super Hopper,TIM-17309,2024-03-06,68200.00,operational,2026-02-22,2,33
+20,South field tractor,tractor,Massey Ferguson,4710,MAS-18220,2025-01-11,49500.00,operational,2026-01-24,2,33
+21,East field harvester,harvester,Claas,Lexion 6700,CLA-19131,2008-02-01,456000.00,in repair,2026-10-22,2,33
+22,West field irrigation,irrigation,Reinke,Electrogator,REI-20042,2008-12-08,84000.00,retired,2009-06-26,3,
+23,Backup trailer,trailer,Big Tex,70TV,BIG-20953,2009-10-15,8190.00,operational,2026-08-25,3,18
+24,Main tractor,tractor,New Holland,T4.120,NEW-21864,2010-08-22,74800.00,operational,2026-07-27,3,18
+25,North field harvester,harvester,John Deere,S660,JOH-22775,2011-06-29,355500.00,operational,2026-06-28,3,18
+26,South field irrigation,irrigation,Zimmatic,9500P,ZIM-23686,2012-05-05,83600.00,operational,,3,
+27,East field trailer,trailer,Neville,3000 Series,NEV-24597,2013-03-12,38000.00,operational,2026-05-01,3,18
+28,West field tractor,tractor,Kubota,M5-111,KUB-25508,2014-01-17,64050.00,in repair,2026-04-02,3,18
+29,Backup harvester,harvester,New Holland,CR8.90,NEW-26419,2014-11-24,495000.00,operational,2026-03-04,3,18
+30,Main irrigation,irrigation,T-L Irrigation,Hydro Pivot,T-L-27330,2015-10-01,72900.00,operational,2026-02-03,3,
+31,North field trailer,trailer,Wilson,Pacesetter,WIL-28241,2016-08-07,53200.00,operational,2026-01-05,3,18
+32,South field tractor,tractor,John Deere,5075E,JOH-29152,2017-06-14,72000.00,operational,2026-10-03,3,18
+33,East field harvester,harvester,Case IH,Axial-Flow 6150,CAS-30063,2018-04-21,357000.00,retired,2018-11-07,4,3
+34,West field irrigation,irrigation,Valley,8120 Pivot,VAL-30974,2019-02-26,101200.00,operational,2026-08-06,4,
+35,Backup trailer,trailer,Timpte,Super Hopper,TIM-31885,2020-01-03,55800.00,in repair,2026-07-08,4,3
+36,Main tractor,tractor,Massey Ferguson,4710,MAS-32796,2020-11-09,52250.00,operational,2026-06-09,4,3
+37,North field harvester,harvester,Claas,Lexion 6700,CLA-33707,2021-09-16,480000.00,operational,2026-05-11,4,3
+38,South field irrigation,irrigation,Reinke,Electrogator,REI-34618,2022-07-24,88200.00,operational,2026-04-12,4,
+39,East field trailer,trailer,Big Tex,70TV,BIG-35529,2023-05-31,8580.00,operational,,4,3
+40,West field tractor,tractor,New Holland,T4.120,NEW-36440,2024-04-06,61200.00,operational,2026-02-13,4,3
+41,Backup harvester,harvester,John Deere,S660,JOH-37351,2025-02-11,375250.00,operational,2026-01-15,4,3
+42,Main irrigation,irrigation,Zimmatic,9500P,ZIM-38262,2008-03-03,88000.00,in repair,2026-10-13,4,
+43,North field trailer,trailer,Neville,3000 Series,NEV-39173,2009-01-08,39900.00,operational,2026-09-14,4,3
+44,South field tractor,tractor,Kubota,M5-111,KUB-40084,2009-11-15,67100.00,retired,2010-06-03,5,28
+45,East field harvester,harvester,New Holland,CR8.90,NEW-40995,2010-09-22,405000.00,operational,2026-07-18,5,28
+46,West field irrigation,irrigation,T-L Irrigation,Hydro Pivot,T-L-41906,2011-07-30,76950.00,operational,2026-06-19,5,
+47,Backup trailer,trailer,Wilson,Pacesetter,WIL-42817,2012-06-05,56000.00,operational,2026-05-21,5,28
+48,Main tractor,tractor,John Deere,5075E,JOH-43728,2013-04-12,75600.00,operational,2026-04-22,5,28
+49,North field harvester,harvester,Case IH,Axial-Flow 6150,CAS-44639,2014-02-17,374000.00,in repair,2026-03-24,5,28
+50,South field irrigation,irrigation,Valley,8120 Pivot,VAL-45550,2014-12-25,82800.00,operational,2026-02-23,5,
+51,East field trailer,trailer,Timpte,Super Hopper,TIM-46461,2015-11-01,58900.00,operational,2026-01-25,5,28
+52,West field tractor,tractor,Massey Ferguson,4710,MAS-47372,2016-09-07,55000.00,operational,,5,28
+53,Backup harvester,harvester,Claas,Lexion 6700,CLA-48283,2017-07-15,504000.00,operational,2026-09-24,5,28
+54,Main irrigation,irrigation,Reinke,Electrogator,REI-49194,2018-05-22,92400.00,operational,2026-08-26,5,
+55,North field trailer,trailer,Big Tex,70TV,BIG-50105,2019-03-29,7020.00,retired,2019-10-15,6,13
+56,South field tractor,tractor,New Holland,T4.120,NEW-51016,2020-02-03,64600.00,in repair,2026-06-29,6,13
+57,East field harvester,harvester,John Deere,S660,JOH-51927,2020-12-10,395000.00,operational,2026-05-31,6,13
+58,West field irrigation,irrigation,Zimmatic,9500P,ZIM-52838,2021-10-17,92400.00,operational,2026-05-02,6,
+59,Backup trailer,trailer,Neville,3000 Series,NEV-53749,2022-08-24,41800.00,operational,2026-04-03,6,13
+60,Main tractor,tractor,Kubota,M5-111,KUB-54660,2023-07-01,54900.00,operational,2026-03-05,6,13
+61,North field harvester,harvester,New Holland,CR8.90,NEW-55571,2024-05-07,427500.00,operational,2026-02-04,6,13
+62,South field irrigation,irrigation,T-L Irrigation,Hydro Pivot,T-L-56482,2025-03-14,81000.00,operational,2026-01-06,6,
+63,East field trailer,trailer,Wilson,Pacesetter,WIL-57393,2008-04-03,58800.00,in repair,2026-10-04,6,13
+64,West field tractor,tractor,John Deere,5075E,JOH-58304,2009-02-08,79200.00,operational,2026-09-05,6,13
+65,Backup harvester,harvester,Case IH,Axial-Flow 6150,CAS-59215,2009-12-16,306000.00,operational,,6,13
+66,Main irrigation,irrigation,Valley,8120 Pivot,VAL-60126,2010-10-23,87400.00,retired,2011-05-11,7,
+67,North field trailer,trailer,Timpte,Super Hopper,TIM-61037,2011-08-30,62000.00,operational,2026-06-10,7,38
+68,South field tractor,tractor,Massey Ferguson,4710,MAS-61948,2012-07-06,57750.00,operational,2026-05-12,7,38
+69,East field harvester,harvester,Claas,Lexion 6700,CLA-62859,2013-05-13,528000.00,operational,2026-04-13,7,38
+70,West field irrigation,irrigation,Reinke,Electrogator,REI-63770,2014-03-20,75600.00,in repair,2026-03-15,7,
+71,Backup trailer,trailer,Big Tex,70TV,BIG-64681,2015-01-25,7410.00,operational,2026-02-14,7,38
+72,Main tractor,tractor,New Holland,T4.120,NEW-65592,2015-12-02,68000.00,operational,2026-01-16,7,38
+73,North field harvester,harvester,John Deere,S660,JOH-66503,2016-10-08,414750.00,operational,2026-10-14,7,38
+74,South field irrigation,irrigation,Zimmatic,9500P,ZIM-67414,2017-08-15,96800.00,operational,2026-09-15,7,
+75,East field trailer,trailer,Neville,3000 Series,NEV-68325,2018-06-22,34200.00,operational,2026-08-17,7,38
+76,West field tractor,tractor,Kubota,M5-111,KUB-69236,2019-04-29,57950.00,operational,2026-07-19,7,38
+77,Backup harvester,harvester,New Holland,CR8.90,NEW-70147,2020-03-05,450000.00,retired,2020-09-21,8,23
+78,Main irrigation,irrigation,T-L Irrigation,Hydro Pivot,T-L-71058,2021-01-10,85050.00,operational,,8,
+79,North field trailer,trailer,Wilson,Pacesetter,WIL-71969,2021-11-17,61600.00,operational,2026-04-23,8,23
+80,South field tractor,tractor,John Deere,5075E,JOH-72880,2022-09-24,64800.00,operational,2026-03-25,8,23
+81,East field harvester,harvester,Case IH,Axial-Flow 6150,CAS-73791,2023-08-01,323000.00,operational,2026-02-24,8,23
+82,West field irrigation,irrigation,Valley,8120 Pivot,VAL-74702,2024-06-07,92000.00,operational,2026-01-26,8,
+83,Backup trailer,trailer,Timpte,Super Hopper,TIM-75613,2025-04-14,65100.00,operational,2026-10-24,8,23
+84,Main tractor,tractor,Massey Ferguson,4710,MAS-76524,2008-05-04,60500.00,in repair,2026-09-25,8,23
+85,North field harvester,harvester,Claas,Lexion 6700,CLA-77435,2009-03-11,432000.00,operational,2026-08-27,8,23
+86,South field irrigation,irrigation,Reinke,Electrogator,REI-78346,2010-01-16,79800.00,operational,2026-07-29,8,
+87,East field trailer,trailer,Big Tex,70TV,BIG-79257,2010-11-23,7800.00,operational,2026-06-30,8,23
+88,West field tractor,tractor,New Holland,T4.120,NEW-80168,2011-09-30,71400.00,retired,2012-04-17,1,8
+89,Backup harvester,harvester,John Deere,S660,JOH-81079,2012-08-06,434500.00,operational,2026-05-03,1,8
+90,Main irrigation,irrigation,Zimmatic,9500P,ZIM-81990,2013-06-13,79200.00,operational,2026-04-04,1,
+91,North field trailer,trailer,Neville,3000 Series,NEV-82901,2014-04-20,36100.00,in repair,,1,8
+92,South field tractor,tractor,Kubota,M5-111,KUB-83812,2015-02-25,61000.00,operational,2026-02-05,1,8
+93,East field harvester,harvester,New Holland,CR8.90,NEW-84723,2016-01-02,472500.00,operational,2026-01-07,1,8
+94,West field irrigation,irrigation,T-L Irrigation,Hydro Pivot,T-L-85634,2016-11-08,89100.00,operational,2026-10-05,1,
+95,Backup trailer,trailer,Wilson,Pacesetter,WIL-86545,2017-09-15,50400.00,operational,2026-09-06,1,8
+96,Main tractor,tractor,John Deere,5075E,JOH-87456,2018-07-23,68400.00,operational,2026-08-08,1,8
+97,North field harvester,harvester,Case IH,Axial-Flow 6150,CAS-88367,2019-05-30,340000.00,operational,2026-07-10,1,8
+98,South field irrigation,irrigation,Valley,8120 Pivot,VAL-89278,2020-04-05,96600.00,in repair,2026-06-11,1,
+99,East field trailer,trailer,Timpte,Super Hopper,TIM-90189,2021-02-10,68200.00,retired,2021-08-29,2,33
+100,West field tractor,tractor,Massey Ferguson,4710,MAS-91100,2021-12-18,49500.00,operational,2026-04-14,2,33

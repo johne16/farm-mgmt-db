@@ -1,0 +1,101 @@
+product_id,product_name,product_category,unit_of_measure,list_price
+1,Tomatoes,produce,lb,2.50
+2,Sweet potatoes,produce,lb,1.20
+3,Butternut squash,produce,lb,1.40
+4,Hard red wheat,grain,bushel,7.10
+5,Yellow corn,grain,bushel,4.60
+6,Whole milk,dairy,gallon,5.25
+7,Cheddar cheese,dairy,lb,8.50
+8,Ground beef,meat,lb,6.75
+9,Brown eggs,eggs,dozen,4.50
+10,Feeder calf,livestock,head,1450.00
+11,Cherry tomatoes,produce,lb,3.25
+12,Heirloom tomatoes,produce,lb,3.75
+13,Russet potatoes,produce,lb,0.80
+14,Red potatoes,produce,lb,0.95
+15,Yukon Gold potatoes,produce,lb,1.10
+16,Acorn squash,produce,lb,1.25
+17,Spaghetti squash,produce,lb,1.30
+18,Delicata squash,produce,lb,1.60
+19,Green cabbage,produce,lb,0.70
+20,Red cabbage,produce,lb,0.85
+21,Napa cabbage,produce,lb,1.15
+22,Bell peppers,produce,lb,2.25
+23,Jalapeno peppers,produce,lb,2.75
+24,Poblano peppers,produce,lb,2.60
+25,Yellow onions,produce,lb,0.90
+26,Red onions,produce,lb,1.05
+27,Sweet onions,produce,lb,1.20
+28,Carrots,produce,lb,1.00
+29,Green beans,produce,lb,2.40
+30,Sweet corn,produce,dozen,6.00
+31,Cucumbers,produce,lb,1.35
+32,Zucchini,produce,lb,1.45
+33,Spinach,produce,lb,3.50
+34,Kale,produce,lb,3.25
+35,Lettuce,produce,head,2.00
+36,Broccoli,produce,lb,2.10
+37,Cauliflower,produce,lb,2.20
+38,Beets,produce,lb,1.30
+39,Radishes,produce,bunch,1.75
+40,Pumpkins,produce,lb,0.65
+41,Soft red wheat,grain,bushel,6.40
+42,Durum wheat,grain,bushel,8.20
+43,White corn,grain,bushel,5.10
+44,Soybeans,grain,bushel,11.30
+45,Oats,grain,bushel,4.20
+46,Barley,grain,bushel,5.50
+47,Rye,grain,bushel,6.10
+48,Sorghum,grain,bushel,5.20
+49,Alfalfa hay,grain,ton,210.00
+50,Timothy hay,grain,ton,240.00
+51,Wheat straw,grain,ton,120.00
+52,Sunflower seed,grain,bushel,9.75
+53,Cornmeal,grain,lb,1.10
+54,Whole wheat flour,grain,lb,1.35
+55,Rolled oats,grain,lb,1.50
+56,Two percent milk,dairy,gallon,5.00
+57,Skim milk,dairy,gallon,4.75
+58,Heavy cream,dairy,quart,5.50
+59,Unsalted butter,dairy,lb,6.25
+60,Salted butter,dairy,lb,6.40
+61,Plain yogurt,dairy,quart,4.80
+62,Cottage cheese,dairy,lb,3.90
+63,Mozzarella,dairy,lb,7.75
+64,Gouda,dairy,lb,9.25
+65,Swiss cheese,dairy,lb,9.00
+66,Goat milk,dairy,gallon,9.50
+67,Goat cheese,dairy,lb,13.50
+68,Ribeye steak,meat,lb,16.50
+69,Sirloin steak,meat,lb,12.75
+70,Chuck roast,meat,lb,8.25
+71,Brisket,meat,lb,9.50
+72,Pork chops,meat,lb,6.90
+73,Pork shoulder,meat,lb,5.25
+74,Bacon,meat,lb,8.40
+75,Pork sausage,meat,lb,6.10
+76,Ham,meat,lb,6.80
+77,Whole chicken,meat,lb,3.95
+78,Chicken breast,meat,lb,6.20
+79,Chicken thighs,meat,lb,3.80
+80,Lamb chops,meat,lb,15.25
+81,Ground lamb,meat,lb,10.50
+82,Goat meat,meat,lb,10.75
+83,White eggs,eggs,dozen,3.90
+84,Free range eggs,eggs,dozen,5.50
+85,Duck eggs,eggs,dozen,8.00
+86,Quail eggs,eggs,dozen,7.25
+87,Jumbo brown eggs,eggs,dozen,5.25
+88,Medium white eggs,eggs,dozen,3.50
+89,Dairy heifer,livestock,head,2100.00
+90,Angus heifer,livestock,head,1900.00
+91,Angus bull,livestock,head,4800.00
+92,Bottle calf,livestock,head,350.00
+93,Feeder pig,livestock,head,120.00
+94,Breeding sow,livestock,head,450.00
+95,Market lamb,livestock,head,240.00
+96,Breeding ewe,livestock,head,320.00
+97,Dairy goat,livestock,head,380.00
+98,Meat goat,livestock,head,260.00
+99,Laying hen,livestock,head,22.00
+100,Broiler chick,livestock,head,3.50
